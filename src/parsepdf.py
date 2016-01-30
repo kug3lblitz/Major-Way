@@ -64,4 +64,4 @@ def test():
     except IOError:
         exit("Invalid file name.")
 
-test()
+# test()

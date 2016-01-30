@@ -7,7 +7,7 @@ from werkzeug import secure_filename
 # from flask_forms import ContactForm
 
 from parsepdf import getPDFText
-from funnel import Funnel, Sprinkler
+from funnel import Funnel
 
 app = Flask(__name__)
 app.secret_key = "fhdsbfdsnjfbj"
@@ -57,6 +57,11 @@ def ViewPDF(filename):
 	return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
+@app.route('/uploads/<filename>/data')
+def ViewData(filename):
+	return send_from_directory('', 'data.json')
+
+
 @app.route('/success', methods=['GET', 'POST'])
 def get_uri():
 
@@ -65,7 +70,7 @@ def get_uri():
 	if request.method == 'POST':
 		
 		data = dict((key, request.form.getlist(key)) for key in request.form.keys()).keys()[0]
-		data = Sprinkler(data)
+		# data = Sprinkler(data)
 		return render_template('success.html', data=data)
 
 	else:

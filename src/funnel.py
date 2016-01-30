@@ -1,5 +1,6 @@
 from ast import literal_eval
 from itertools import chain
+from json import dump
 from operator import itemgetter
 from os.path import abspath, dirname, join
 from re import compile, findall
@@ -219,10 +220,12 @@ def Digiorno(topics):
 	for i in topics:
 		pie[i] = float("{0:.2f}".format(float(topics.count(i)) / len(topics) * 100))
 
-
 	counter = sum(pie.values())
 
-	return pie, counter
+	with open('data.json', 'w') as outfile:
+		dump(pie, outfile)
+
+	return pie
 
 
 '''
@@ -272,11 +275,11 @@ def Sprinkler(url):
 
 ########## FOR TESTING ############
 
-parsed = FileIO()
-# predictList = Funnel(parsed).FossilFuel(5)[:5]
-# print predictList
-parsed = Hook(parsed)
-print Digiorno(parsed)
+# parsed = FileIO()
+# # predictList = Funnel(parsed).FossilFuel(5)[:5]
+# # print predictList
+# parsed = Hook(parsed)
+# print Digiorno(parsed)
 
 # predictList = [i[1] for i in predictList]
 
@@ -302,4 +305,4 @@ print Digiorno(parsed)
 end = time()
 
 print "\nProgram took " + "{0:.3f}".format(
-        (end - start)) + " seconds to generate data."
+		(end - start)) + " seconds to generate data."
