@@ -1,81 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Why are you reading my code?">
-		<meta name="author" content="Sabbir">
-		<link href="{{ url_for('static', filename = 'img/icon.png') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Why are you reading my code?">
+    <meta name="author" content="Sabbir">
+    <link href="{{ url_for('static', filename = 'img/icon.png') }}">
 
-		<title>Study Guy | Results</title>
+    <title>Study Guy | Results</title>
 
 
-		{% include 'css.html' %}
-
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    {% include 'css.html' %}
+    {% include 'js.html' %}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-	</head>
+    <script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}">
+    </script>
 
-	<body>
 
-		<section class="success">
-			<div class="container">
+</head>
 
-				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="text-center">Your syllabus is on...</h1>
-						<hr class="wrench">
+<body>
 
-						{% for i in data %}
-						<div class="svg-wrapper" style="display: block; margin-left: auto; margin-right: auto;">
-							<svg height="40" width="500" xmlns="http://www.w3.org/2000/svg">
-								<rect id="shape" height="40" width="500" /></rect>
-								<div id="text" data-dismiss="modal">
-									<!-- <a href="javascript:void(0)"> -->
-									<span class="spot"></span>
-									<i class="fa fa-times"></i>
-										{{ i }}
-									<!-- </a> -->
-								</div>
-							</svg>
-						</div>
-						<p></p>
-						{% endfor %}
+<section class="success">
+    <div class="container">
 
-					</div>
-				</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Your syllabus is on...</h1>
+                <hr class="wrench">
 
-				<div class="row">
-					<div class="ui-widget">
+                {% for i in data %}
+                    <div class="svg-wrapper"
+                         style="display: block; margin-left: auto; margin-right: auto;">
+                        <svg height="40" width="500"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect id="shape" height="40" width="500"/>
+                            </rect>
+                            <div id="text" data-dismiss="modal">
+                                <!-- <a href="javascript:void(0)"> -->
+                                <span class="spot"></span>
+                                <i class="fa fa-times"></i>
+                                {{ i }}
+                                <!-- </a> -->
+                            </div>
+                        </svg>
+                    </div>
+                    <p></p>
+                {% endfor %}
 
-						<h1 class="text-center">Choose subject:</h1>
-						<!-- <label for="topics">Topic: </label> -->
-						<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-						<input id="topics" class="ui-autocomplete-input" align="center" autocomplete="off">
-						<a href="javascript:void(0)" onclick="myFunction()" id="submit1" >Go</a>
+            </div>
+        </div>
 
-					</div>
+        <div class="row">
+            <div class="ui-widget">
 
-					<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"
-						id="ui-id-1" tabindex="0" style="display: none;"></ul>
+                <h1 class="text-center">Choose subject:</h1>
+                <!-- <label for="topics">Topic: </label> -->
+                <span role="status" aria-live="polite"
+                      class="ui-helper-hidden-accessible"></span>
+                <input id="topics" class="ui-autocomplete-input" align="center"
+                       autocomplete="off">
+                <a href="javascript:void(0)" onclick="myFunction()"
+                   id="submit1">Go</a>
 
-					<div id="test"></div>
+            </div>
 
-				</div>
-			</div>
+            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"
+                id="ui-id-1" tabindex="0" style="display: none;"></ul>
 
-		</section>
+            <div id="test"></div>
 
-	</body>
+        </div>
+    </div>
 
-	{% include 'js.html' %}
+
+    <br>
+    <br>
+
+    <script>
+
+        window.onload = function () {
+
+            var label1 = 'Math';
+            var label2 = 'Physics';
+            var label3 = 'Chemistry';
+            var label4 = 'Biology';
+
+            var percent1 = 83.0;
+            var percent2 = 7.0;
+            var percent3 = 2.5;
+            var percent4 = 7.5;
+
+            var rawr_data =
+                    [
+                        {
+                            y: percent1,
+                            legendText: label1,
+                            label: label1
+                        },
+
+                        {
+                            y: percent2,
+                            legendText: label2,
+                            label: label2
+                        },
+
+                        {
+                            y: percent3,
+                            legendText: label3,
+                            label: label3
+                        },
+                        {
+                            y: percent4,
+                            legendText: label4,
+                            label: label4
+                        }
+                    ];
+
+
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title: {
+                            text: "Chart stuff"
+                        },
+                        animationEnabled: true,
+                        legend: {
+                            verticalAlign: "center",
+                            horizontalAlign: "left",
+                            fontSize: 20,
+                            fontFamily: "Helvetica"
+                        },
+                        theme: "theme2",
+                        data: [
+                            {
+                                type: "pie",
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontSize: 20,
+                                indexLabel: "{label} {y}%",
+                                startAngle: -20,
+                                showInLegend: true,
+                                toolTipContent: "{legendText} {y}%",
+                                dataPoints: rawr_data
+                            }
+                        ]
+                    });
+            chart.render();
+        }
+
+    </script>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+</section>
+
+</body>
+
 
 </html>
