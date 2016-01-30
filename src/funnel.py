@@ -5,13 +5,11 @@ from operator import itemgetter
 from sys import exit
 from time import time
 
+from bs4 import BeautifulSoup
+from database.wikipedia import WikipediaPage
 from os.path import abspath, dirname, join
 from re import I, M, S  # regex flags
 from re import compile
-
-# from bs4 import BeautifulSoup
-
-from database.wikipedia import WikipediaPage
 
 start = time()
 
@@ -206,6 +204,19 @@ def Hook(parsed):
             except:
                 continue
 
+        # for i in disciplines.values():
+        # 	for j in i:
+        for i in disciplines:
+            if i in parsed.lower():
+                try:
+                    summary = str(WikipediaPage(i).summary)
+                    summary = Funnel(summary).FossilFuel(2)[:5]
+                    summary = [i[1] for i in summary]
+                    topics.extend(summary)
+                    print topics
+                except:
+                    continue
+
     return topics
 
 
@@ -224,59 +235,126 @@ def Digiorno(topics):
 
     return pie
 
+    ########## FOR SPRINKLER ############
+    # def Sprinkler(url):
+    # 	DB_URL = "http://dbpedia.org/page/" + str(url)
+    #
+    # 	htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
+    # 					  '.*'
+    # 					  '<!-- footer -->', I | S | M)
+    #
+    # 	try:
+    # 		import requests
+    # 		getData = requests.get(DB_URL).text
+    #
+    # 	except requests.ConnectionError:
+    # 		exit("You forgot to turn your Wi-Fi on.")
+    #
+    # 	except:
+    #
+    # 		try:
+    # 			print "Requests library not found. Using urllib2."
+    #
+    # 			import urllib2
+    # 			getData = urllib2.urlopen(DB_URL).read()
+    #
+    # 		except urllib2.URLError:
+    # 			exit("Check your internet connection!")
+    #
+    # 	htmldata = findall(htmlPat, getData)
+    #
+    # 	majors = []
+    #
+    # 	soup = BeautifulSoup(" ".join(htmldata), "html.parser")
+    #
+    # 	for tag in soup.findAll(attrs={'class': 'uri'}):
+    # 		try:
+    # 			tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
+    # 			majors.append(tags)
+    # 		except:
+    # 			continue
+    #
+    # 	disciplines = [i for i in sorted(set(majors))]
+    # 	disciplines = [i for i in disciplines if i.lower() not in i]
+    #
+    # 	return disciplines
+    pie = {}
+    counter = 0
+    disciplines = Disciplines()
 
-########## FOR SPRINKLER ############
-# def Sprinkler(url):
-# 	DB_URL = "http://dbpedia.org/page/" + str(url)
-#
-# 	htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
-# 					  '.*'
-# 					  '<!-- footer -->', I | S | M)
-#
-# 	try:
-# 		import requests
-# 		getData = requests.get(DB_URL).text
-#
-# 	except requests.ConnectionError:
-# 		exit("You forgot to turn your Wi-Fi on.")
-#
-# 	except:
-#
-# 		try:
-# 			print "Requests library not found. Using urllib2."
-#
-# 			import urllib2
-# 			getData = urllib2.urlopen(DB_URL).read()
-#
-# 		except urllib2.URLError:
-# 			exit("Check your internet connection!")
-#
-# 	htmldata = findall(htmlPat, getData)
-#
-# 	majors = []
-#
-# 	soup = BeautifulSoup(" ".join(htmldata), "html.parser")
-#
-# 	for tag in soup.findAll(attrs={'class': 'uri'}):
-# 		try:
-# 			tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
-# 			majors.append(tags)
-# 		except:
-# 			continue
-#
-# 	disciplines = [i for i in sorted(set(majors))]
-# 	disciplines = [i for i in disciplines if i.lower() not in i]
-#
-# 	return disciplines
+    # print topics
 
+    for i in topics:
+
+        try:
+            # for j in disciplines.values():
+            # for  in disciplines:
+            if i in disciplines:
+                print i
+                pie[i] = float("{0:.2f}".format(
+                        float(topics.count(i)) / len(topics) * 100))
+
+        except Exception as e:
+            print e
+
+    counter = sum(pie.values())
+
+    with open('data.json', 'w') as outfile:
+        dump(pie, outfile)
+
+    return pie
+
+
+def Sprinkler(url):
+    DB_URL = "http://dbpedia.org/page/" + str(url)
+
+    htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
+                      '.*'
+                      '<!-- footer -->', I | S | M)
+
+    try:
+        import requests
+        getData = requests.get(DB_URL).text
+
+    except requests.ConnectionError:
+        exit("You forgot to turn your Wi-Fi on.")
+
+    except:
+
+        try:
+            print "Requests library not found. Using urllib2."
+
+            import urllib2
+            getData = urllib2.urlopen(DB_URL).read()
+
+        except urllib2.URLError:
+            exit("Check your internet connection!")
+
+    htmldata = findall(htmlPat, getData)
+
+    majors = []
+
+    soup = BeautifulSoup(" ".join(htmldata), "html.parser")
+
+    for tag in soup.findAll(attrs={'class': 'uri'}):
+        try:
+            tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
+            majors.append(tags)
+        except:
+            continue
+
+    disciplines = [i for i in sorted(set(majors))]
+    disciplines = [i for i in disciplines if i.lower() not in i]
+
+    return disciplines
 
 ########## FOR TESTING ############
 
-# parsed = FileIO()
+parsed = FileIO()
 # # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # # print predictList
-# parsed = Hook(parsed)
-# print Digiorno(parsed)
+parsed = Hook(parsed)
+print Digiorno(parsed)
 
 # predictList = [i[1] for i in predictList]
 
