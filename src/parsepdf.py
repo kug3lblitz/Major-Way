@@ -48,20 +48,20 @@ Output: Textfile of parsed data
 '''
 
 
-def test():
-    from os.path import abspath, dirname, join
+#def test():
+ #   from os.path import abspath, dirname, join
 
-    BASEDIR = dirname(abspath(__file__))
-    path = join(BASEDIR, "samples", raw_input("Enter file path: "))
+#    BASEDIR = dirname(abspath(__file__))
+#    path = join(BASEDIR, "samples", raw_input("Enter file path: "))
 
-    try:
-        words = getPDFText(str(path) + ".pdf")
-        if words != '':
-            with open("samples/parsed.txt", "wb") as result:
-                result.write(words)
-            print "Text is extracted and saved as 'parsed.txt'."
-
-    except IOError:
-        exit("Invalid file name.")
-
-test()
+#    try:
+ #       words = getPDFText(str(path) + ".pdf")
+#        if words != '':
+#            with open("samples/parsed.txt", "wb") as result:
+#                result.write(words)
+#            print "Text is extracted and saved as 'parsed.txt'."
+#
+#    except IOError:
+#        exit("Invalid file name.")
+#
+#test()

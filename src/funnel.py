@@ -272,11 +272,11 @@ def Sprinkler(url):
 
 ########## FOR TESTING ############
 
-parsed = FileIO()
+#parsed = FileIO()
 # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # print predictList
-parsed = Hook(parsed)
-print Digiorno(parsed)
+#parsed = Hook(parsed)
+#print Digiorno(parsed)
 
 # predictList = [i[1] for i in predictList]
 

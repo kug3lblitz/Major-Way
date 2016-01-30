@@ -7,7 +7,7 @@ from werkzeug import secure_filename
 # from flask_forms import ContactForm
 
 from parsepdf import getPDFText
-from funnel import Funnel, Sprinkler
+from funnel import Funnel#, Sprinkler
 
 app = Flask(__name__)
 app.secret_key = "fhdsbfdsnjfbj"
