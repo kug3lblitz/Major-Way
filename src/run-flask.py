@@ -7,7 +7,7 @@ from werkzeug import secure_filename
 # from flask_forms import ContactForm
 
 from parsepdf import getPDFText
-from funnel import Funnel
+from funnel import Funnel, Sprinkler
 
 app = Flask(__name__)
 app.secret_key = "fhdsbfdsnjfbj"
@@ -70,7 +70,7 @@ def get_uri():
 	if request.method == 'POST':
 		
 		data = dict((key, request.form.getlist(key)) for key in request.form.keys()).keys()[0]
-		# data = Sprinkler(data)
+		data = Sprinkler(data)
 		return render_template('success.html', data=data)
 
 	else:

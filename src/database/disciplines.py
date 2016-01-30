@@ -7,7 +7,7 @@ from sys import exit
 
 def Majors():
 
-	natsciPat = compile('<dd><i>See also <a href="/wiki/Biology" title="Biology">Biology</a>'
+	bioPat = compile('<h3><span class="mw-headline" id="Biology">'
 		'.*'
 		'<li><a href="/wiki/Planetary_science" title="Planetary science">Planetary science</a>', I|S|M)
 
@@ -34,20 +34,40 @@ def Majors():
 			exit("Check your internet connection!")
 
 	htmldata = list(
-		findall(natsciPat, getData) +
+		findall(bioPat, getData) +
 		findall(formalPat, getData)
 		)
+
+	parentPat = compile('<h3><span class="mw-headline".*</span><s', I)
+
+	parentsData = findall(parentPat, ' '.join(htmldata))
+
+	grandparents = []
+	parents = []
+
+	childrenPat = compile('">\D+</span>', I)
+
+	for i in parentsData:
+		i = str(i)
+		grandparents.extend(findall(childrenPat, i))
+
+	for i in grandparents:
+		i = i.replace('">', '')
+		i = i.replace('</span>', '')
+		parents.append(i)
 
 	majors = []
 
 	soup = BeautifulSoup(" ".join(htmldata), "html.parser")
 	for tag in soup.findAll('a', href = True):
 		try:
-		    majors.append(str(tag['title']))
+			# if str(tag['title']) in parents:
+			print str(tag['title'])
+			majors.append(str(tag['title']))
 		except:
 			continue
 
-	disciplines = [i.lower() for i in sorted(set(majors))]
+	disciplines = [i.lower() for i in majors]
 	disciplines = [i for i in disciplines if not any(c.isdigit() for c in i)]
 	disciplines = [i for i in disciplines if "list" not in i]
 	disciplines = [i for i in disciplines if "edit" not in i]
@@ -58,6 +78,10 @@ def Majors():
 	disciplines = [i for i in disciplines if "the arts" not in i]
 
 	return disciplines
+
+
+# def Adopted():
+
 
 
 def main():

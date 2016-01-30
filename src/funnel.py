@@ -8,7 +8,7 @@ from re import I, M, S  # regex flags
 from sys import exit
 from time import time
 
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 
 from database.wikipedia import WikipediaPage, exceptions
 
@@ -191,7 +191,6 @@ def Disciplines(topic=""):
 	return disciplines
 
 
-
 def Hook(parsed):
 
 	disciplines = Disciplines()
@@ -199,15 +198,18 @@ def Hook(parsed):
 	topicsTest = {}
 	topics = []
 
+	# for i in disciplines.values():
+	# 	for j in i:
 	for i in disciplines:
-		if i in parsed.lower():
-			try:
-				summary = str(WikipediaPage(i).summary)
-				summary = Funnel(summary).FossilFuel(2)[:5]
-				summary = [i[1] for i in summary]
-				topics.extend(summary)
-			except:
-				continue
+			if i in parsed.lower():
+				try:
+					summary = str(WikipediaPage(i).summary)
+					summary = Funnel(summary).FossilFuel(2)[:5]
+					summary = [i[1] for i in summary]
+					topics.extend(summary)
+					print topics
+				except:
+					continue
 
 	return topics
 
@@ -216,9 +218,21 @@ def Digiorno(topics):
 
 	pie = {}
 	counter = 0
+	disciplines = Disciplines()
+
+	# print topics
 
 	for i in topics:
-		pie[i] = float("{0:.2f}".format(float(topics.count(i)) / len(topics) * 100))
+
+		try:
+			# for j in disciplines.values():
+			# for  in disciplines:
+			if i in disciplines:
+				print i
+				pie[i] = float("{0:.2f}".format(float(topics.count(i)) / len(topics) * 100))
+
+		except Exception as e:
+			print e
 
 	counter = sum(pie.values())
 
@@ -228,8 +242,8 @@ def Digiorno(topics):
 	return pie
 
 
-'''
 def Sprinkler(url):
+
 	DB_URL = "http://dbpedia.org/page/" + str(url)
 
 	htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
@@ -271,15 +285,15 @@ def Sprinkler(url):
 	disciplines = [i for i in disciplines if i.lower() not in i]
 
 	return disciplines
-'''
+
 
 ########## FOR TESTING ############
 
-# parsed = FileIO()
+parsed = FileIO()
 # # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # # print predictList
-# parsed = Hook(parsed)
-# print Digiorno(parsed)
+parsed = Hook(parsed)
+print Digiorno(parsed)
 
 # predictList = [i[1] for i in predictList]
 
