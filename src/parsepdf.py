@@ -57,9 +57,11 @@ def test():
     try:
         words = getPDFText(str(path) + ".pdf")
         if words != '':
-            with open("tempdocs/parsed.txt", "wb") as result:
+            with open("samples/parsed.txt", "wb") as result:
                 result.write(words)
             print "Text is extracted and saved as 'parsed.txt'."
 
     except IOError:
         exit("Invalid file name.")
+
+test()
