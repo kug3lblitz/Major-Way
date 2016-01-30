@@ -1,0 +1,84 @@
+<section id="contact" style="color: #69059e">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1><strong>Contact</strong></h1>
+				<hr class="rocket">
+			</div>
+		</div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+				{% if success %}
+
+					<p><strong>Thank you for your message. I'll get back to you shortly.</strong></p>
+
+				{% else %}
+
+					{% for message in form.name.errors %}
+						<div class="flash text-center"><strong>{{ message }}</strong></div>
+					{% endfor %}
+
+					{% for message in form.email.errors %}
+						<div class="flash text-center"><strong>{{ message }}</strong></div>
+					{% endfor %}
+
+					{% for message in form.subject.errors %}
+						<div class="flash text-center"><strong>{{ message }}</strong></div>
+					{% endfor %}
+
+					{% for message in form.message.errors %}
+						<div class="flash text-center"><strong>{{ message }}</strong></div>
+					{% endfor %}
+
+				<form action="{{ url_for('contact') }}" method=post class=".navbar-form">
+				
+					{{ form.hidden_tag() }}
+
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>{{ form.name.label }}</label>
+							{{ form.name(class_ = "form-control", placeholder = "Name") }}
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>{{ form.email.label }}</label>
+							{{ form.email(class_ = "form-control", placeholder = "Email") }}
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>{{ form.subject.label }}</label>
+							{{ form.subject(class_ = "form-control", placeholder = "Subject") }}
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>{{ form.message.label }}</label>
+							{{ form.message(class_ = "form-control", placeholder = "Message") }}
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+
+					{{ form.submit(class_="button_sliding_bg") }}
+
+				</form>
+
+				{% endif %}
+
+			</div>
+		</div>
+
+	</div>
+
+</section>

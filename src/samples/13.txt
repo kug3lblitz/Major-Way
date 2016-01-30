@@ -1,0 +1,88 @@
+UMBC    CMPE 212    Digital Analysis and Design    
+
+Fall 2015
+
+ 
+Instructor: Dhananjay S. Phatak 
+course web-site: Course-web-site 
+Office : ITE 319 
+
+Phone : 5-3624 
+
+email : phatak@umbc.edu 
+
+Office Hours: Tue 11 am - 1 pm 
+
+TAs: Apeksha Lanjile               email: apeksha2@umbc.edu         office hrs: TBD 
+     Patrick Sykes         email: psykes1@umbc.edu         office hrs: TBD 
+
+Textbook : ``Digital Logic Circuit Analysis and Design'' by Victor P. Nelson, H. Troy Nagle, Bill D. Carroll and J.
+David Irwin, Prentice Hall, 1995.
+
+Other reference material
+(As far as possible, material not included in the textbook will be made available either via the web or will be on
+reserve in the library.)
+
+``Digital Design, Principles and Practices'', by John F. Wakerly, 3rd Edition, Prentice Hall 2001, ISBN : 0-13-
+089896-1 
+
+open in browser PRO version Are you a developer? Try out the HTML to PDF API
+
+pdfcrowd.com
+
+``Switching and Finite Automata Theory'', by Zvi Kohavi, McGraw Hill, 1978.  This is a classic book on
+switching theory.
+
+Verilog: there are a large number of tutorials and manuals on line.
+
+Topics to be covered
+
+Introduction
+Number systems and codes (Chap 1)
+Combinational Logic (Chaps 2, 3) (Switching algebra, Simplification of switching functions, hazards)
+Combinational logic design practices and examples (Chaps 4 and 5)
+Sequential logic (Chap 6)
+Sequential logic design examples (Chap 7)
+Analysis, Simplification and synthesis of sequential logic (Chaps 8,9)
+
+Evaluation :
+
+1.  Two Mid term exams, 20% each. (non cumulative)
+
+Exam 1:    in the 3rd week of October 
+Exam 2:    in the last week of November
+
+2.  Final (cumulative) 30%
+
+3.  Homeworks 10%
+
+4.  Lab 20% (follow the Lab link on the course web page for more info.)
+
+ 
+Goals of the Course : To develop an understanding of the fundamentals of digital logic analysis and synthesis. 
+
+open in browser PRO version Are you a developer? Try out the HTML to PDF API
+
+pdfcrowd.com
+
+ 
+
+ABET Accreditation : You are expected to participate (ex., by filling surveys in a timely manner whenever
+requested) 
+in the continual monitoring, assessment and improvement of the education you are receiving. 
+ABET requires the demonstration of such closed-loop continual evaluation and enhancement process(es) at work 
+throughout the curriculum in a program in order for that educational program (such as the BS in CS or CMPE) 
+to be Accredited(blessed). 
+
+For a brief intro to what is ABET follow this link: ABET and how it relates to 212
+
+Academic Conduct :
+
+UMBC's   Academic Integrity    policy and standards set forth in the   hyperlinked documents     must be adhered
+to.
+
+open in browser PRO version Are you a developer? Try out the HTML to PDF API
+
+pdfcrowd.com
+
+

@@ -1,0 +1,189 @@
+CMSC 341  Data Structures  Fall 2015
+
+Home
+
+Sections
+
+Topics
+
+Homework
+
+Projects
+
+Exams
+
+Resources
+
+FAQ Staff
+
+Syllabus
+
+Syllabus
+
+Course Description
+
+Data Structures are the paramount concern of this course. The principle objective of the course is to help you learn how to
+design and analyze a wide range of data structures.
+
+The course covers data structures and associated algorithms. Relationships among data structures, their utility in various
+situations, and factors affecting their performance in algorithms will be considered. You will learn to analyze the demands of
+algorithms, how to choose appropriate data structures, and how to integrate data structures into algorithms.
+
+Textbooks
+
+Required Textbook
+
+Data Structures and Algorithms in C++ 2nd Edition
+
+by Godrich, Tamassia, and Mount, 
+Wiley, ISBN  978-0-470-46044-3
+
+Recommended
+
+You should have a C++ language reference book handy. 
+
+Prerequisites
+
+We will assume that you have mastered the material from CMSC 201, CMSC 202, and CMSC 203. We will not review material
+that has been covered in the prerequisite courses. We assume prior experience with C++ (CMSC 202). A short review of
+important C++ concepts and techniques will be provided. We do cover a few of the concepts from CMSC 202, but from a deeper
+point-of-view. If you are not familiar with C++, please seek help from Computer Science Help Center or TA.
+
+Note: Computer science majors must also have completed CMSC 201 and CMSC 202 with a grade of B or
+better to be enrolled in this course.
+
+Grading
+
+The weighting of grades between projects, homework and exams varies by section. Please consult the section web pages for this
+information.
+
+Your final letter grade is based on the standard formula:
+
+0  F < 60  D < 70  C < 80 = B < 90  A  100.
+
+These levels may be adjusted slightly in your favor, but grades will not be curved in the conventional sense.
+
+Your grade is given for timely work done during the semester; incomplete grades will only be given for medical illness or other
+
+such dire circumstances.
+
+Note that the due dates for the projects and the dates of the exams are already set (q.v., the course schedule). Please plan your
+schedules accordingly. Makeup exams will be given only under the most dire circumstances (almost never).
+
+Your grade is based on 6 programming projects, 6 homework assignments, 2 in-class exams and the final exam. The points are
+distributed as follows:
+
+You will be allowed 3 "Grace Days" on projects 1-5 (not project 0). See Projects->Late Policy.
+
+Project 0
+
+Project 1-5
+
+Homework 1-6
+
+Exam 1 & 2
+
+Final Exam
+
+points
+
+#
+
+Total
+
+3
+
+7
+
+2
+
+15
+
+20
+
+1
+
+5
+
+6
+
+2
+
+1
+
+3
+
+35
+
+12
+
+30
+
+20
+
+Total:
+
+100
+
+Bonus Points (on 1 project)
+
++10 max
+
+Attendance and Readings
+
+You are expected to attend all lectures. You are responsible for all material covered in the lecture, even if it is not in the
+textbook. You should keep up with the assigned readings during the semester. Some reading material will be distributed
+through the course web page. You are responsible for the material in the readings, even if it is not covered during lecture.
+
+You must study to do well in this course. It will not be enough to attend lectures and do the homework. As advanced
+undergraduates, you will be responsible for learning material that is not necessarily covered in lectures. A prime learning
+
+requirement is that you contribute to class discussions and raise questions about the course material.
+
+Five quizzes will be given sporadically through out the semester (2pts each). At the end of the semester the points from quizzes
+will be added as bonus points to one of your projects.
+
+Contacting your instructor or the TAs
+
+Please feel free to visit your own instructor or any of the TAs during their office hours. If you can't make it during the regular
+hours, please ask for an appointment. Office hours, phone numbers and other contact information is available on-line. If you
+need to contact any of the course staff outside of lecture and office hours, email is much better than the telephone. You should,
+however, observe the following etiquette:
+
+Do not email program code. If you want your instructor or the TA to help you debug your code, copy your code into the
+shared folder on GL and then send email about the problem. We can retrieve the code from the shared folders. Please, do
+NOT mail code to your instructor or to TA!
+
+Please use your your UMBC account to send mail. This will remove any ambiguity about who you are. (For those of you
+with multiple Gmail accounts, do not name your UMBC Gmail account "UMBC". Your outgoing mail will display your name
+as "UMBC".)
+
+Include a meaningful subject line, something like CMSC 341 Project 2 question.
+
+Academic Integrity
+
+Cheating in any form will not be tolerated. Instances of cheating will be reported to the UMBC Academic Conduct Committee.
+These reports are filed by the Committee and can be used for disciplinary action such as a permanent record on your transcript.
+Academic honesty is absolutely required of you. You are expected to be honest yourself and to report any cases of dishonesty
+you see among other students in this class. Reports of dishonest behavior will be kept anonymous.
+
+Further details on honesty in doing projects for this course are on-line at the Project Academic Conduct link.
+
+Also, any deliberate abuse of the grading and submission procedures, whether to hide an act of misconduct, or to hinder others
+from timely submission, is regarded as academic misconduct in its own right.
+
+Students are welcome and encouraged to study together for exams, but examinations are to be your own work  not your
+neighbor's and not your notes. All exams are closed-book, closed-notes. Only pencils (or pens) and erasers are permitted in the
+exam room unless otherwise indicated. Scratch paper is provided to you, as needed. Having any other materials in your
+possession during an exam will be taken as evidence of cheating and dealt with accordingly.
+
+Course & Section Web Pages
+
+Please check both the course and section web pages frequently. Any changes to the page will be mentioned in the
+Announcements.
+
+CMSC 341  Fall 2015
+
+CMSC 341 | CSEE | UMBC
+
+

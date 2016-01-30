@@ -1,0 +1,838 @@
+PHYS121
+4CREDITS 
+
+ 
+
+ 
+
+COURSE 
+DESCRIPTION 
+
+ 
+
+ 
+
+Introductory Physics I 
+ Instructor: Lili Cui 
+
+ 
+
+Spring2014
+MWF9:009:50AM
+
+SYLLABUS
+
+
+
+This is a four credit-hour, calculus-based physics course for students majoring in science or 
+engineering.  This course covers basic mechanics and some modern physics.  By the end of 
+this semester, you will be able to: 
+  Understand a small set of fundamental physical principles 
+
+o  the momentum principle (Newton's laws, conservation of momentum)  
+o  the energy principle (conservation of energy) 
+o  the angular momentum principle (conservation of angular momentum)  
+o  the fundamental assumptions of statistical mechanics  
+
+  Use these principles to explain a wide variety of physical phenomena 
+  Use these principles to predict the behavior of a variety of physical systems 
+  Model complicated physical systems by making approximations and idealizations in 
+
+order to be able to apply fundamental principles 
+
+  Create 3D animated computer models of physical situations 
+The course will emphasize rigorous problem-solving in physics using interactive instruction, 
+cooperative learning, educational software, and computer applications important for 
+science and engineering students.   
+
+PREREQUISITE  YoumusthavecompletedMATH151,orbeenrolledinitthissemester.
+
+ 
+
+The math skills required is a good knowledge of algebra and a basic knowledge of 
+derivatives, which can be obtained from a semester of calculus.  No prior experience with 
+computer programming is required.  We will teach you everything you need to know for 
+the computer modeling that is a component of the course. 
+ 
+Dr. Lili Cui  
+lili@umbc.edu  
+OfficeHours:23pmMTuW
+
+  Visitingmyofficehouristhebestwayofcontact. The time is set aside for you and you 
+
+Room226PhysicsBuilding(same room as the Physics Tutorial Center) 
+
+ 
+
+will get individual attention.  Id love to use the time to know you in person.   
+Idonotanswerspecificphysicsquestionsthroughemail.  Physics related questions 
+should be postedontheDiscussionBoards(inBlackboard) insteadofpersonalemail.   
+  For other questions, email is a great method of contact.  Please include your full name, 
+course and discussion section number, give detailed information, and use your UMBC 
+email address to ensure prompt response. IfIfailtorespondtoyouremailwithinone
+businessday,mostlikelyyourquestionisanswereddirectlyinthesyllabus,Blackboard
+announcements,orisbetteraddressedintheDiscussionBoard. 
+ 
+
+  Matter&Interactions, by Chabay and Sherwood, 3rd edition 
+  WebAssign(online discussion & homework system) 
+  Clicker, Turning Technologies clicker RFC-03 
+  Non-programmable and non-graphing calculator 
+  A clear and focused mind, good attitude 
+
+
+Page 1 of 6 
+
+INSTRUCTOR 
+CONTACT 
+INFO 
+
+REQUIRED 
+TEXTBOOK & 
+OTHER 
+MATERIAL 
+
+ 
+
+ 
+
+SUCCESS 
+STRATEGY 
+ 
+
+GRADING 
+POLICY 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+LECTURES 
+
+	
+
+  Make sure you have the time required for the course.  You are expected to attend all 
+classes  lectures and discussions.  In addition, experience shows that success requires 
+atleast8hoursofintensiveeffortoutsideofclass.  If you typically spend much less 
+than 8 hours studying for the course, you are unlikely to be successful.  If you typically 
+spend much more than 12 hours studying, you should consult with the instructor about 
+ways to improve efficiency.  
+
+  Physics is about understanding, not memorization.  Instead of only paying attention to 
+
+the results, it is more important to understandhowtogettheresults.   
+
+  You have manyresources including the textbook, study group, your friends, teaching 
+
+ 
+
+assistants, me, YouTube and more.  Use them wisely. 
+It is essential to developanabilitytothinkandlearnforyourself.  You must be actively 
+engaged to learn the material, you cannot passively watch me or your classmates and 
+expect to understand the concepts and develop problem solving skills.  Cognitive 
+science has proven that the mind must interact to learn. 
+
+Success in the course is not a piece of cake, but can be achieved with effort and the right 
+study strategies.   
+ 
+
+TypeofAssignment
+Exam (four mid-term) 
+
+Final Exam 
+Homework 
+Discussion 
+Reading Quiz 
+
+Total
+
+In Class Participation & Quiz 
+
+MaximumPoints
+
+200 pts (50%) 
+80 pts (20%) 
+40 pts (10%) 
+40 pts (10%) 
+20 pts (5%) 
+20 pts (5%) 
+
+400pts
+
+ 
+Idonotgradeonacurve.Why should I assume that x% of you will be failing this course? If 
+you all do an excellent job, you all deserve an A.  How well your neighbor is doing should 
+not affect your grade.  Help each other and learn from each other.  
+ 
+
+360 pts or above (>90%) 
+ 320-359 pts (80% - 89%) 
+280-319 pts (70% - 79%) 
+240-279 pts (60% - 69%) 
+239 pts or below (<59%) 
+
+A 
+B 
+C 
+D 
+F 
+
+ 
+IfyouhaveanAaverage(288/320)at5pmonMay14,youneednottakethefinalexam.
+CheckyourgradesonBlackboardroutinely.  You need to review your points for discussions 
+and exams as soon as they are returned to you.  PleasecontactmeoryourTAforany
+gradingquestionswithinoneweekofreceivingyourgradedexam/homework/discussion.
+ 
+  You are required toreadthetextbooksectionspriortoeveryclass; it makes for 
+efficient learning.  You are required to complete the weeklyreadingquizthrough
+Blackboard. The class time will be spent on clarifying and applying the materials. 
+
+  Yourparticipation(notmerelyattendance)inthelecturesisrequired with the use of 
+
+clicker.  SeeBlackboardannouncementonhowtoregisteryourclicker. You need to 
+bring your clicker (with good battery) to every class.   
+
+Page 2 of 6 
+
+  There is a shortquizatthebeginning/endofFridayslecture, either by clicker or 
+
+paper/pencil. 
+
+  The lecturePowerPointslideswillbepostedonBlackboard the night before every 
+lecture.  You are expected to print them out to take lecture notes on; it gives you the 
+structure of every lecture and facilitates the note-taking process.  But remember these 
+slides are not the complete content of the class but only an outline, studying them out 
+is not a substitute for attending lectures. 
+If you miss one lecture, you are responsible for making up the material.   
+
+ 
+ 
+ 
+
+Individual  homework  will  be  submitted  via  the  WebAssign online system,  see
+BlackboardannouncementonhowtoenrollWebAssign. Homework will be assigned at 
+the end of class on Wednesdays and Fridays.  Wednesdays homework is due at 2 am 
+on Friday, and Fridays homework is due at 2 am on the next Wednesday.  
+
+  A major part of what I expect you to learn in this class will come as a result of doing 
+homework.    You need to fully understand how to solve the assigned homework
+problemstodowellontheexamsandtosucceedinthiscourse.   
+
+  Homework questions are noteasy and occasionally you will find yourself spending a lot 
+of time on them.  This is expected.  Don'tputoffassignmentsuntilthenightbefore
+theyaredue. Start your homework early enough so you have time to get help.   
+
+  TheanswerkeytosomeofthehomeworkquestionswillbepostedonBlackboard. 
+  You  are  encouraged  to  work  together,  however,  you  must  fully  understand  how  to 
+
+solve problems on your own to prepare for exams. 
+
+ 
+  You must attend the discussion section that you are officially registered for.   
+  Fullattendanceisrequiredforeverydiscussion.Discussion is based on group work, it's 
+designed to provide you with a collaborative learning environment so you can help and 
+learn from each other.  To ensure the integrity of group work and the fairness to each 
+group member, full attendance is mandatory and therewillbeapenaltyforarriving
+late  or leaving early.  20%  will  be  removed  from  the  discussion  score  for  every  five 
+minutes that a student is tardy in coming to the discussion.  In addition, those arriving 
+late  to  class  will  not  be  allowed  to  benefit  from  the  work  of  students  who  arrive  on 
+time. If you are ten minutes late, you will be automatically removed from your original 
+group.  You might need to work on your own or join another group.
+
+  There will be oneindiscussionquiz oncomputationalmodeling, see the schedule for 
+the exact date. The discussion VPython activities and homework will help you acquire 
+the computational problem solving skills youll need.
+
+  TheanswerkeytoalldiscussionactivitieswillbepostedonBlackboard.
+  Your discussion instructor will provide specific guidelines. 
+ 
+  Youhavetodowellonallexamstobeabletogetagoodgradeforthecourse.  The 
+reading  quiz,  lecture,  discussion  activities,  and  homework  will  help  you  acquire  the 
+understanding and problem solving skills youll need.  
+
+  You are allowed to bring a3*5indexcard and useanonprogrammableandnon
+graphingcalculator during exams. No cell phones or other communication devices. 
+
+ 
+The final exam will be comprehensive.  There is no make-up exam for the final and no one 
+will be allowed to take the final at a different time.      
+ 
+
+Page 3 of 6 
+
+HOMEWORK 
+
+DISCUSSION  
+
+EXAM 
+
+FINAL EXAM 
+
+	
+
+MARK UP 
+POLICY 
+ 
+
+ 
+CLASSROOM 
+COURTESY 
+
+TUTORIAL 
+CENTER     
+(FREE) 
+
+ACADEMIC 
+INTEGRITY 
+
+DISABILITIES 
+
+ 
+
+
+
+	
+
+Life  is  full  with  surprises  so  its  understandable  that  you  might  miss  a  class  or  two.    The 
+course policy has been set up to accommodate a few unexpected situations. Those of you 
+representing  UMBC  in  officially  sanctioned  university  activities  should  speak  with  me  as 
+soon as possible to address possible conflicts.  
+  Lecture: You will be given 4freedays for not clicking in lecture. Thesecounttowards
+ALLabsencesandclickermalfunctions.Noindividualaccommodationsarepossible. If 
+you attend class but forget your clicker, you do not get participation points.   
+
+  Reading Quiz and Homework:Fullcreditisassignedforcompleting90%ofthetotal
+pointsofReadingQuizandHomework. This allows you to try a few times and miss a 
+few  questions  for  whatever  reasons.  Late  submissions  will  not  be  accepted.  No
+individualaccommodationsarepossible.
+
+  Discussion: There is no make-up discussion. Fullcreditisassignedforcompleting90%
+ofthetotalWebAssigndiscussionpoints.This allows you to try a few times and miss a 
+few questions for whatever reasons. Noindividualaccommodationsarepossible. 
+
+  Exam: If  you  must  miss  an  exam  due  to  officially-sanctioned  UMBC  activities,  illness, 
+family  emergency,  detention  by  authorities,  or  another  insurmountable  difficulty, 
+contactmeassoonaspossible. At my discretion, Ill request written verification of the 
+cause of your absence and arrange a makeup exam over the same material. 
+
+ 
+Every student deserves a good learning environment. 
+  Respecteachother.
+  Arrive at class on time, pack and leave when the instructor says class is over. 
+  Do not talk during the class to distract your fellow students or me, unless you are asked 
+
+to discuss questions. 
+
+  Unless 
+
+instructed  otherwise  the  use  of 
+
+is  allowed only  for  valid 
+course-related  activities.  You  should  not  be  checking  e-mail,  tweeting  etc.  during 
+lectures or the discussion sessions. 
+ 
+
+laptops  etc 
+
+  The PhysicsTutorialCenter is on a walk-in basis and provides one-to-one help. See my 
+
+Blackboard announcement for updated schedule. 
+
+  The Learning Resource Center supplies private tutors.  Please contact at (410) 455-2444 
+
+or visit http://www.umbc.edu/lrc/ to make individual arrangement. 
+
+ 
+"By  enrolling  in  this  course,  each  student  assumes  the  responsibilities  of  an  active 
+participant  in  UMBC's  scholarly  community  in  which  everyone's  academic  work  and 
+behavior  are  held  to  the  highest  standards  of  honesty.  Cheating,  fabrication,  plagiarism, 
+and helping others to commit these acts are all forms of academic dishonesty, and they are 
+wrong. Academic misconduct could result in disciplinary action that may include, but is not 
+limited  to,  suspension  or  dismissal.  To  read  the  full  Student  Academic  Conduct  Policy, 
+consult the UMBC Student Handbook. 
+ 
+ 
+
+If  you  have  any  condition  such  as  a  physical  learning  disability,  which  will  make  it 
+difficult  for  you  to  carry  out  the  work  as  I  have  outlined  it  or  which  will  require 
+academic accommodations, please notify me in the first two weeks of the course. 
+If you are taking the exam with the Student Support Services, inform me by email with 
+the detailed information atleast48hoursbeforeeveryexam. 
+
+Page 4 of 6 
+
+COURSE 
+WEBSITE 
+
+I will put most of my teaching materials in our course site through Blackboard. After log in 
+myUMBC, click on the Blackboard tab and then click on PHYS121-SP2014 in the My 
+Courses  area.  You are responsible for all content delivered via Blackboard. You  are 
+required to logon to the course website atleastoncebetweenlectures. 
+You will use the website for: 
+
+  Checking the Announcements. 
+  Accessing  Course Documents:  syllabus,  reading  quiz,  lectures  note,  learning 
+
+objectives, answer keys, and etc. 
+
+  Checking the Grades that you have earned. 
+ 
+
+Interacting with the instructor and others online using DiscussionBoards. 
+
+ 
+TA CONTACT 
+INFO 
+
+ 
+  Roy Prouty  
+proutyr1@umbc.edu  
+  Gene Shanholtz  eshanh1@umbc.edu  
+
+TA/LATeachingScheduleforDiscussions
+
+Monday
+
+Tuesday
+
+Wednesday
+
+Thursday
+
+Friday
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+PHYS121H(5035) 
+
+W 1-2:50 
+
+Dr. Laszlo Takacs* 
+
+Kevin Whitley 
+
+PHYS12102 (3767) 
+
+W 4:30-6:20 
+Roy Prouty* 
+Toby Clevinger 
+Hailey Lynch 
+
+W 6:30-8:20 
+Roy Prouty* 
+Toby Clevinger 
+Andreas Seas 
+
+
+
+PHYS12107 (7321) 
+
+Th 8-9:50 
+
+Gene Shanholtz* 
+Brandon Alexander 
+
+Andreas Seas 
+
+PHYS12104 (3769) 
+
+Th 12:30-2:20 
+Roy Prouty* 
+Amy Gottlied 
+
+Wei Trinh 
+
+PHYS12103 (3768) 
+
+Th 2:30-4:20 
+
+Gene Shanholtz* 
+
+Hailey Lynch  
+Wei Trinh 
+
+Th 4:30-6:20 
+
+Gene Shanholtz* 
+
+Amy Gottlied 
+
+Brandon Alexander 
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+PHYS12106 (3771) 
+
+PHYS12105 (3770) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Page 5 of 6 
+
+
+
+
+
+
+	
+
+ 
+
+
+
+8:00
+8:30
+9:00
+9:30
+10:00
+10:30
+11:00
+11:30
+12:00
+12:30
+1:00
+1:30
+2:00
+2:30
+3:00
+3:30
+4:00
+4:30
+5:00
+5:30
+6:00
+6:30
+7:00
+7:30
+8:00
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+Date
+
+Textbook
+
+Schedule
+
+
+
+LectureTopic
+
+Week 4 
+
+Week 2 
+
+Week 3 
+
+Week 1 
+
+Uniform motion and graphs 
+
+1.1-1.6 
+1.5, 2.8 
+1.6-1.9 
+2.1-2.2 
+2.3-2.5 
+2.6 
+3.1-3.5 
+3.6-3.10 
+2.5 
+4.5, 4.11 
+
+3D vector properties 
+Jan 27 (M) 
+Jan 29 (W)   Motion and modeling 
+Jan 31 (F)  
+Feb 03 (M)  Momentum principle 
+Feb 05(W) 
+Feb 07 (F) 
+Feb 10 (M) 
+Feb 12 (W) 
+Feb 14 (F) 
+Feb 17 (M) 
+Feb 19 (W) 
+Feb 21 (F) 
+Feb 24 (M) 
+Feb 26 (W) 
+Feb 28 (F) 
+Mar 03 (M)  Momentum principle (statics) 
+Mar 05 (W  Momentum principle (circular motion) 
+Mar 07 (F) 
+Mar 10  (M) 
+Mar 12 (W) 
+Mar 14 (F) 
+Week 8  Mar 16-22 
+
+Applying momentum principle 
+Free fall and projectile motion 
+Gravitational force 
+Electric Force 
+Ball-spring model and spring force 
+Springs in series and parallel 
+ApplicationsHelpsession121PM  
+Exam1(Ch.13) 
+ 
+4.1-4.3 
+Spring mass system 
+4.4-4.5 
+Interatomic bond 
+Youngs modulus 
+4.6-4.9 
+5.1-5.2 
+5.3-5.7 
+6.1-6.4 
+6.6-6.8 
+ 
+ 
+
+Energy principle 
+Energy transfer  work  
+Applications  
+Exam2(Ch.45) 
+
+Helpsession121PM 
+
+Spring Break  
+
+Week 5 
+
+Week 6 
+
+Week 7 
+
+Week 9 
+
+Week 12 
+
+Week 11 
+
+Week 10 
+
+Electric potential energy 
+Energy graphs 
+
+Mar 24 (M)  Gravitational potential energy 
+Mar 26 (W) 
+Mar 28 (F) 
+Mar 31 (M)  Mass energy equivalence 
+Apr 02 (W) 
+Apr 04 (F) 
+Apr 07 (M) 
+Apr 09 (W) 
+Apr 11 (F) 
+Apr 14 (M) 
+Apr 16 (W) 
+Apr 18 (F) 
+Apr 21 (M) 
+Apr 23 (W) 
+Apr 25 (F) 
+Apr 28 (M) 
+Apr 30 (W) 
+May 02 (F) 
+May 05 (M) 
+May 07 (W) 
+May 09 (F) 
+Week 16  May 12 (M) 
+May 16 (F) 
+Final  
+
+Spring potential energy 
+Internal energy, thermal energy and heat 
+Energy quantization 
+Spectra  
+Rotational kinetic energy  
+Point-particle system vs. real system 
+Applications
+Exam3(Ch.68) 
+Collisions in 1D 
+Collisions in 2D and 3D     
+Angular momentum 
+Angular momentum principle 
+Conservation of angular momentum 
+Three fundamental principles 
+Entropy and temperature 
+Specific heatHelpsession121PM  12.6 
+Exam4(Ch.912) 
+Semester summary 
+FinalExam(Ch.112)  8:00 AM  10:00 AM in MEYR 030 
+
+6.9-6.13 
+6.14 
+6.11 
+6.5, 6.15-6.17 
+7.1-7.3, 7.11 
+7.4-7.9 
+8.1-8.2 
+8.3-8.6 
+9.1-9.3 
+9.4-9.5 
+ 
+ 
+10.1-10.4 
+10.6-10.7 
+11.1-11.3 
+11.4-11.5 
+11.7-11.8 
+11.6 
+12.1-12.5 
+
+Helpsession121PM 
+
+Week 13 
+
+Week 14 
+
+Week 15 
+
+ 
+
+ 
+
+
+
+
+
+	
+
+Lab
+
+Introduction to 3D 
+Vector & VPython 
+
+Mapping the CASTLE 
+
+Fan Cart Motion 
+
+Space Voyage 
+
+Springs 
+
+Youngs Modulus 
+
+Problem solving 
+
+Computational
+ModelingQuiz
+
+Throw ball up 
+& Space Voyage 
+
+(part 2) 
+
+Springs 
+(part 2)  
+
+Hydrogen Spectra 
+
+Jump Up 
+
+Rutherford Scattering 
+
+Statistical Mechanics 
+
+No discussion 
+
+Page 6 of 6 
+
+

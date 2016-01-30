@@ -1,0 +1,226 @@
+UMBC bookstore textbook return rules
+Wednesday, September 2nd is the last day to refund or exchange textbooks for the fall
+semester.
+
+MATH 221-02 [2570], Fall 2015
+Introduction to Linear Algebra
+
+Course information
+
+MATH 221-02 [2570]: Introduction to Linear Algebra
+
+Course:
+Time/Place: TuTh 1:00pm-2:15pm, MP 103
+Instructor:
+Office:
+Phone:
+Email:
+Office hours: Tu, Th 2:15 PM-3:00 PM and by appointment
+
+Dr.  Jacob Kogan
+MP 426
+410-455-3297
+kogan at math.umbc.edu
+
+Grader: Emily Silver
+
+esilver1@umbc.edu
+
+Textbook
+
+Linear Algebra and Its Applications (fourth edition) by Lay, Addison-Wesley, 2012. 
+(the text is available, for example, at alibris, amazon, barnes and noble, cheapesttextbooks, chegg, fetchbook,
+priority, valorebooks). 
+Some useful material (including practice exams) can be found here and here.
+Course Description
+
+Linear Algebra deals with systems of linear equations, their fundamental properties, and transformations of vector
+spaces. The basic objects of the course are vectors and matrices.
+
+Linear algebra techniques are widely used in many areas, such as mathematics, engineering, economics, finance.
+They are also cornerstones for a variety of advance classes in science and engineering. The course will describe
+basic basic concepts and tools of linear algebra.
+
+We will try to cover the following material: Sections 1.1-1.9, 2.1-2.3, 3.1-3.2, 4.1-4.6, 5.2-5.3, 6.1-6.4. 
+We may cover these topics in a different order. Depending on time we may cover more (or delete) topics.
+Course Objectives
+
+The following three topics will be emphasized:
+
+1.  the algebra of linear equations and matrices,
+2.  the geometry of vector spaces,
+3.  algorithms for solving linear equations.
+
+By the end of the class one should know:
+
+to characterize existence, uniqueness and solution sets of systems of linear equations via the row reduction
+algorithm,
+
+to perform matrix operations, including inverse and determinant computations,
+to characterize vector spaces or subspaces, and determine their dimension and matrix ranks,
+to compute eigenvectors and eigenvalues, and perform matrix diagonalization,
+concepts of orthogonality and orthogonal bases, carry out orthogonal transformations and projections.
+
+Homework, Quizzes, Tests, and Grading
+
+Homework
+
+Weekly homework will be assigned on Thursday and collected the following Thursday.
+The two lowest homework grades will be disregarded.
+Please staple your homework, and present the problems in the order assigned, if you want credit.
+No late homework will be accepted.
+
+Quizzes, Tests, and Grading
+
+The final grade will be based on homework grades (20 pt), four quizzes (20 pt each), and the comprehensive final
+(50 pt).
+
+Date
+
+Points Topic
+
+Thursday, September 17 20 pt
+
+Sec. 1.1-1.5
+
+Tuesday, October 13
+
+Tuesday, November 10
+
+Tuesday, December 1
+
+20 pt
+
+20 pt
+
+20 pt
+
+Sec. 1.7-1.9, 2.1-2.3
+
+Sec. 4.1-4.6
+
+Sec. 3.2, 5.2, 5.3
+
+Quiz Solutions Old Quiz
+
+quiz 1 quiz 1
+
+quiz 2 quiz 2
+
+quiz 3 quiz 3
+
+quiz 4 quiz 4
+
+Tuesday, December 15
+
+50 pt material covered by 4 quizzes and Sec. 6.4
+
+The final exam is from 1:00 pm through 3:00 pm on Tuesday, December 15, 2015.
+
+There will be no make up quizzes or tests.
+
+Letter grade cutoffs are expected to be the following:
+
+Percentage
+Letter Grade
+
+ 90% 89%  and  80% 79%  and  70% 69%  and  60% 59% 
+
+A
+
+B
+
+C
+
+D
+
+F
+
+Read through the relevant section of the text (and look over all the assigned problems) before each lecture.
+
+Remember: Mathematics is NOT a spectator sport. 
+
+Homework assignments
+
+HW1 due Thursday 09/10/15 starts here
+Sec. 1.1, p.10: 1, 3, 12, 17, 21, 23(a)
+Sec. 1.2, p.21: 10, 12, 14, 20, 31
+Sec. 1.3, p.32: 9, 10, 12, 14, 23(c,d, e) 
+HW1 due Thursday 09/10/15 ends here 
+HW2 due Thursday 09/17/15 starts here
+
+Sec. 1.3, p.32: 24(a,c), 26
+Sec. 1.4, p.40: 2, 4, 6, 8, 9, 12, 13, 35;
+Sec. 1.5, p.47: 2, 8, 10, 12, 15, 18, 35, 38 
+
+HW2 due Thursday 09/17/15 ends here 
+HW3 due Thursday 09/24/15 starts here
+Sec. 1.7, p.60: 6, 8, 14, 18, 20, 21, 33 
+HW3 due Thursday 09/24/15 ends here 
+HW4 due Thursday 10/01/15 starts here
+
+open in browser PRO version Are you a developer? Try out the HTML to PDF API
+
+pdfcrowd.com
+
+HW4 due Thursday 10/01/15 starts here
+
+Sec. 1.8, p.68: 26, 27, 30, 32
+Sec. 1.9, p.78: 11, 15, 22, 26, 34 
+
+HW4 due Thursday 10/01/15 ends here 
+HW5 due Thursday 10/08/15 starts here
+Sec. 2.1, p.100: 3, 5, 6, 12, 24, 26, 33
+Sec. 2.2, p.109: 4, 9(a,b,c,d), 14, 16, 18, 31 
+
+HW5 due Thursday 10/08/15 ends here 
+HW6 due Thursday 10/15/15 starts here
+
+Sec. 2.3, p. 115: 2, 4, 8, 11(a,d,e), 12(a,b,c), 21, 27, 33, 39. 
+
+HW6 due Thursday 10/15/15 ends here 
+NO HOMEWORK DUE Thursday 10/22/15 
+HW7 due Thursday 10/29/15 starts here 
+
+Sec. 4.1, p. 195: 16, 21, 22, 32, 33
+Sec. 4.2, p. 205: 6, 9, 14, 27, 28
+Sec. 4.3, p.213: 3, 8, 13, 14, 21(b,c,d), 22(a,b,e), 25, 33 
+
+HW7 due Thursday 10/29/15 ends here 
+HW8 due Thursday 11/05/15 starts here
+
+Sec. 4.4, p.222: 3, 7, 10, 14, 22;
+Sec. 4.5, p.229: 3, 8, 10, 14, 15, 17 
+
+HW8 due Thursday 11/05/15 ends here 
+HW9 due Thursday 11/12/15 starts here
+
+Sec. 4.5, p.229: 19(a,d), 20(d)
+Sec. 4.6, p.236: 2, 3, 7, 8, 9, 11, 18(a,c), 31, 32; 
+
+HW9 due Thursday 11/12/15 ends here 
+NO HOMEWORK DUE Thursday 11/19/15 
+HW10 due Tuesday 11/24/15 starts here
+
+Sec. 3.2, p.175: 6, 15, 22, 35, 40
+Sec. 5.2, p.279: 2, 4, 7, 8, 25
+Sec. 5.3, p.286: 6, 7, 12, 20 
+
+open in browser PRO version Are you a developer? Try out the HTML to PDF API
+
+pdfcrowd.com
+
+HW10 due Tuesday 11/24/15 ends here
+The Official UMBC Honors Code
+
+By enrolling in this course, each student assumes the responsibilities of an active participant in UMBC's
+scholarly community in which everyone's academic work and behavior are held to the highest standards
+of honesty. Cheating, fabrication, plagiarism, and helping others to commit these acts are all forms of
+academic dishonesty, and they are wrong. Academic misconduct could result in disciplinary action that
+may include, but is not limited to, suspension or dismissal.
+
+To read the full Student Academic Conduct Policy, consult the UMBC Student Handbook, the Faculty Handbook, the
+UMBC Integrity webpage www.umbc.edu/integrity, or the Graduate School website
+http://www.umbc.edu/gradschool/procedures/integrity.html.
+
+

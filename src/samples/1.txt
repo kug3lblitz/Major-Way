@@ -1,0 +1,255 @@
+ 
+ 
+
+ 
+Fall 2015 
+ 
+ 
+ 
+Classrooms: 
+ 
+Instructor: 
+ 
+ 
+ 
+Textbook: 
+
+ 
+ 
+
+ 
+ 
+
+CMPE 306    Introductory Circuit Theory   
+
+Lecture: M, W 1:00  2:15 pm   
+Lab: Tu  11:00 am  1:00 pm, 1:00 pm  3:00 pm   
+ 
+
+F  9:00 am  11:00 am 
+
+ITE 104 (lecture); ITE 242 (lab)   
+
+Prof. Li Yan 
+ITE 315, x3558, liyan@umbc.edu 
+Office Hours:  M, W 2:30  3:30 pm, or by appointment   
+
+Fundamentals  of  Electrics  Circuits,  5th  Ed.,  by  Alexander  and  Sadiku 
+(McGraw-Hill)   
+
+ 
+Prerequisite:  PHSY 122, MATH 225 (co-requisite) 
+   
+This  course  introduces  the  fundamental  linear  passive  elements  of  resistance, 
+ 
+capacitance, inductance and the physical basis for their current voltage characteristics.    It 
+covers the basic analysis of circuits with these linear passive elements including Kirchoff 
+laws, node and mesh analysis and a solution of the resulting circuit differential equations 
+for  transient  and  steady-state  responses.    The  Laplace  transform  is  presented  with  its 
+application to the solution of network problems.    The  transform  (frequency)  domain  in 
+introduced.    The  operational  amplifier  and  circuits  using  these  components  is  covered.   
+The course includes a laboratory in which the student designs and makes measurements 
+on simple test circuits using both real components and PSPICE simulation.     
+ 
+Grading: 
+ 
+ 
+ 
+ 
+Course Goals 
+
+~20%   Labs 
+~10%  Homework assignments 
+~40%  Two midterm tests 
+~30%  Final exam 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+1.  Students learn the basic characteristics of linear circuit elements, including DC and AC 
+
+current and voltage sources, resistors, capacitors, inductors, and transformers.   
+2.  Students learn the fundamental laws of circuit analysis, including Ohms Law, 
+
+Kirchhoffs Current Law, and Kirchhoffs Voltage Law. 
+
+3.  Students acquire skill in the application of the basic methods of linear circuit analysis, 
+
+including nodal analysis, mesh analysis, and the use of PSPICE circuit analysis software. 
+
+4.  Students acquire skills in the analysis of first order RL and RC circuits, including the 
+
+determination of initial conditions and computation of transient response. 
+
+5.  Students acquire skills in the analysis of second order RLC circuits, including the 
+
+determination of initial condition and computation of transient response. 
+
+6.  Students  acquire  skills  in  the  analysis  of  circuits  involving  AC  sources,  including  the 
+computation  of  complex  impedances,  instantaneous  power,  real  and  average  power, 
+reactive power, apparent power and power factor. 
+
+7.  Students become familiar with Bode plots of frequency domain performance. 
+
+8.  Students acquire skill in the application of Thevenins Theorem and Norton Theorem to 
+the  analysis  DC  and  AC  circuits,  including  determination  of  the  load  impedance 
+necessary form maximum power transfer. 
+
+9.  Students learn the basics of analysis of circuits with magnetic coupling and transformers. 
+10.  Students obtain sufficient skills to permit meaningful review and study of other texts and 
+
+technical articles. 
+
+11.  Students develop skills and familiarity with basic linear electrical circuits in a laboratory 
+setting, including familiarity with standard test equipment (power sources, breadboards, 
+oscilloscopes,  multimeters,  etc.)  and  the  ability  to  perform  basic  circuit  design  and 
+implementation. 
+
+   
+Subjects and Approximate Schedule: 
+
+8/26  ) 
+( 
+Week 1 
+9/02  ) 
+(8/31 
+Week 2 
+9/09  ) 
+( 
+Week 3 
+(9/14, 
+9/16  ) 
+Week 4 
+(9/21,      9/23  ) 
+Week 5 
+(9/28,      9/30  ) 
+Week 6 
+(10/05,    10/07) 
+Week 7 
+(10/12  10/14) 
+Week 8 
+(10/19,  10/21) 
+Week 9 
+(10/26,    10/28) 
+Week 10 
+Week 11    (11/02,    11/04) 
+Week 12    (11/09,    11/11) 
+Week 13    (11/16,    11/18) 
+Week 14    (11/23,    11/25) 
+Week 15    (11/30,    12/02) 
+ 
+Week 16    (12/07, 
+) 
+Week 17    ( 
+12/16) 
+ 
+
+Student Academic Integrity 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+  Chapter 1 
+  Chapter 2   
+  Chapter 3   
+  Chapter 3, Chapter 4 
+  Chapter 4   
+  Chapter 5   
+  midterm exam 1, Chapter 6 
+  Chapter 7   
+  Chapter 8   
+  Chapter 9   
+  Chapter 10 , midterm exam 2 
+  Chapter 10, Chapter 11 
+  Chapter 11   
+  Chapter 13  
+  Chapter 14  
+  review 
+ 
+  final exam 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Lab 1 
+Lab 2 
+Lab 3 
+Lab 4 
+Lab 5 
+ 
+Lab 6 
+Lab 7 
+Lab 8 
+ 
+Lab 9 
+Lab 10 
+ 
+Lab final 
+ 
+
+ 
+
+ 
+
+"By  enrolling  in  this  course,  each  student  assumes  the  responsibilities  of  an  active 
+participant  in  UMBC's  scholarly  community  in  which  everyone's  academic  work  and 
+behavior  are  to  be  held  to  the  highest  standards  of  honesty.  Cheating,  fabrication, 
+plagiarism, and helping others to commit these acts are all forms of academic dishonesty, 
+and  they  are  wrong.  Academic  misconduct  could  result  in  disciplinary  action  that  may 
+include, but is not limited to, suspension or dismissal. To read the full Student Academic 
+Policy,  consult  the  UMBC  Student  Handbook,  the  Faculty  Handbook,  or  the  UMBC 
+Policies section of the UMBC Directory." 
+ 
+Late homework and lab reports will not be accepted.    You  may  study  together.    You  must 
+do  your  own  work  and  not  copy  from  anyone  else  or  from  the  solutions  obtained 
+elsewhere! Copying will result in zero points and cheating on the exams will be reported 
+to the department and university.     
+ 
+
+
