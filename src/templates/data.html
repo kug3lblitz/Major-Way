@@ -89,44 +89,6 @@
     <script>
         window.onload = function () {
 
-            var label1 = 'Math';
-            var label2 = 'Physics';
-            var label3 = 'Chemistry';
-            var label4 = 'Biology';
-
-            var percent1 = 83.0;
-            var percent2 = 7.0;
-            var percent3 = 2.5;
-            var percent4 = 7.5;
-
-
-            var rawr_data =
-                    [
-                        {
-                            y: percent1,
-                            legendText: label1,
-                            label: label1
-                        },
-
-                        {
-                            y: percent2,
-                            legendText: label2,
-                            label: label2
-                        },
-
-                        {
-                            y: percent3,
-                            legendText: label3,
-                            label: label3
-                        },
-                        {
-                            y: percent4,
-                            legendText: label4,
-                            label: label4
-                        }
-                    ];
-
-
             var data_set =
             {
                 "ecology": 1.85,
@@ -166,22 +128,14 @@
                 "acoustics": 1.85,
                 "biotechnology": 1.85
             };
-
-            var counter = 0;
-
             var parsed_data_set = [];
-
             for (value in data_set) {
 
                 new_topic = {
                     y: data_set[value],
-                    legendText:value,
+                    legendText: value,
                     label: value
                 };
-
-
-                console.log(value);
-                console.log(new_topic);
 
                 parsed_data_set.push(new_topic);
 

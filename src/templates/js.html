@@ -48,7 +48,7 @@
         var label = 'Category:' + $topics.val();
         if (label)
             url = topics[label] || encodeURIComponent(label).replace(/%20/g, "_").replace(/%3A/g, ":")
-        return url
+        return url;
         // console.log(url);
     }
 
@@ -60,5 +60,7 @@
             document.getElementById('test').innerHTML = data;
         });
     }
+
+
 
 </script>
