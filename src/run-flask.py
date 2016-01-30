@@ -57,6 +57,11 @@ def ViewPDF(filename):
 	return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
+@app.route('/uploads/<filename>/data')
+def ViewData(filename):
+	return send_from_directory('', 'data.json')
+
+
 @app.route('/success', methods=['GET', 'POST'])
 def get_uri():
 

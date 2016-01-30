@@ -1,81 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Why are you reading my code?">
-		<meta name="author" content="Sabbir">
-		<link href="{{ url_for('static', filename = 'img/icon.png') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Why are you reading my code?">
+    <meta name="author" content="Sabbir">
+    <link href="{{ url_for('static', filename = 'img/icon.png') }}">
 
-		<title>Study Guy | Results</title>
+    <title>Study Guy | Results</title>
 
 
-		{% include 'css.html' %}
-
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    {% include 'css.html' %}
+    {% include 'js.html' %}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-	</head>
+    <script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}">
+    </script>
 
-	<body>
 
-		<section class="success">
-			<div class="container">
+</head>
 
-				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="text-center">Your syllabus is on...</h1>
-						<hr class="wrench">
+<body>
 
-						{% for i in data %}
-						<div class="svg-wrapper" style="display: block; margin-left: auto; margin-right: auto;">
-							<svg height="40" width="500" xmlns="http://www.w3.org/2000/svg">
-								<rect id="shape" height="40" width="500" /></rect>
-								<div id="text" data-dismiss="modal">
-									<!-- <a href="javascript:void(0)"> -->
-									<span class="spot"></span>
-									<i class="fa fa-times"></i>
-										{{ i }}
-									<!-- </a> -->
-								</div>
-							</svg>
-						</div>
-						<p></p>
-						{% endfor %}
+<section class="success">
+    <div class="container">
 
-					</div>
-				</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Your syllabus is on...</h1>
+                <hr class="wrench">
 
-				<div class="row">
-					<div class="ui-widget">
+                {% for i in data %}
+                    <div class="svg-wrapper"
+                         style="display: block; margin-left: auto; margin-right: auto;">
+                        <svg height="40" width="500"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect id="shape" height="40" width="500"/>
+                            </rect>
+                            <div id="text" data-dismiss="modal">
+                                <!-- <a href="javascript:void(0)"> -->
+                                <span class="spot"></span>
+                                <i class="fa fa-times"></i>
+                                {{ i }}
+                                <!-- </a> -->
+                            </div>
+                        </svg>
+                    </div>
+                    <p></p>
+                {% endfor %}
 
-						<h1 class="text-center">Choose subject:</h1>
-						<!-- <label for="topics">Topic: </label> -->
-						<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-						<input id="topics" class="ui-autocomplete-input" align="center" autocomplete="off">
-						<a href="javascript:void(0)" onclick="myFunction()" id="submit1" >Go</a>
+            </div>
+        </div>
 
-					</div>
+        <div class="row">
+            <div class="ui-widget">
 
-					<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"
-						id="ui-id-1" tabindex="0" style="display: none;"></ul>
+                <h1 class="text-center">Choose subject:</h1>
+                <!-- <label for="topics">Topic: </label> -->
+                <span role="status" aria-live="polite"
+                      class="ui-helper-hidden-accessible"></span>
+                <input id="topics" class="ui-autocomplete-input" align="center"
+                       autocomplete="off">
+                <a href="javascript:void(0)" onclick="myFunction()"
+                   id="submit1">Go</a>
 
-					<div id="test"></div>
+            </div>
 
-				</div>
-			</div>
+            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"
+                id="ui-id-1" tabindex="0" style="display: none;"></ul>
 
-		</section>
+            <div id="test"></div>
 
-	</body>
+        </div>
+    </div>
 
-	{% include 'js.html' %}
+
+    <br>
+    <br>
+
+    <script>
+        window.onload = function () {
+
+            var data_set =
+            {
+                "ecology": 1.85,
+                "social science": 1.85,
+                "systems science": 1.85,
+                "engineering": 1.85,
+                "mathematical system theory": 3.7,
+                "ecosystem ecology": 1.85,
+                "astrobiology": 1.85,
+                "formal science": 1.85,
+                "earth science": 1.85,
+                "computer graphics": 3.7,
+                "programming languages": 3.7,
+                "history of computer hardware": 1.85,
+                "multimedia": 1.85,
+                "scientific computing": 1.85,
+                "systems theory": 1.85,
+                "control theory": 3.7,
+                "control engineering": 1.85,
+                "mathematical statistics": 1.85,
+                "information science": 1.85,
+                "areas of mathematics": 3.7,
+                "computer science": 9.26,
+                "mathematics": 3.7,
+                "artificial intelligence": 7.41,
+                "general systems theory": 3.7,
+                "systems engineering": 1.85,
+                "biology": 1.85,
+                "computer networking": 3.7,
+                "mathematical analysis": 1.85,
+                "epidemiology": 1.85,
+                "statistics": 3.7,
+                "chemical engineering": 1.85,
+                "finite element analysis": 1.85,
+                "bioinformatics": 5.56,
+                "linear algebra": 1.85,
+                "acoustics": 1.85,
+                "biotechnology": 1.85
+            };
+            var parsed_data_set = [];
+            for (value in data_set) {
+
+                new_topic = {
+                    y: data_set[value],
+                    legendText: value,
+                    label: value
+                };
+
+                parsed_data_set.push(new_topic);
+
+            }
+
+
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title: {
+                            text: "Chart stuff"
+                        },
+                        animationEnabled: true,
+                        legend: {
+                            verticalAlign: "center",
+                            horizontalAlign: "left",
+                            fontSize: 20,
+                            fontFamily: "Helvetica"
+                        },
+                        theme: "theme2",
+                        data: [
+                            {
+                                type: "pie",
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontSize: 20,
+                                indexLabel: "{label} {y}%",
+                                startAngle: -20,
+                                showInLegend: true,
+                                toolTipContent: "{legendText} {y}%",
+                                dataPoints: parsed_data_set
+
+                            }
+                        ]
+                    });
+            chart.render();
+        }
+
+    </script>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+</section>
+
+</body>
+
 
 </html>

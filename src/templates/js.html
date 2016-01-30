@@ -18,45 +18,49 @@
 
 <script src="{{ url_for('static', filename = 'js/jquery-ui.min.js') }}"></script>
 
+
+}
 <script type="text/javascript">
 
-	var topics = {},
-			$topics = $("#topics").autocomplete({
-				autoFocus: true,
-				source: function (request, callback) {
-					$.ajax({
-						url: "http://lookup.dbpedia.org/api/search/PrefixSearch",
-						data: {MaxHits: 10, QueryString: request.term},
-						dataType: "json",
-						success: function (response) {
-							callback(response.results.map(function (m) {
-								topics[m.label] = m.uri;
-								return m.label;
-							}));
-						}
-					});
-				}
-			}).keyup(function (event) {
-				if (event.keyCode === 13)
-					navigateToTopic();
-			});
-	$('button').click(myFunction);
+    var topics = {},
+            $topics = $("#topics").autocomplete({
+                autoFocus: true,
+                source: function (request, callback) {
+                    $.ajax({
+                        url: "http://lookup.dbpedia.org/api/search/PrefixSearch",
+                        data: {MaxHits: 10, QueryString: request.term},
+                        dataType: "json",
+                        success: function (response) {
+                            callback(response.results.map(function (m) {
+                                topics[m.label] = m.uri;
+                                return m.label;
+                            }));
+                        }
+                    });
+                }
+            }).keyup(function (event) {
+                if (event.keyCode === 13)
+                    navigateToTopic();
+            });
+    $('button').click(myFunction);
 
-	function navigateToTopic() {
-		var label = 'Category:' + $topics.val();
-		if (label)
-			url = topics[label] || encodeURIComponent(label).replace(/%20/g, "_").replace(/%3A/g, ":")
-		return url
-		// console.log(url);
-	}
+    function navigateToTopic() {
+        var label = 'Category:' + $topics.val();
+        if (label)
+            url = topics[label] || encodeURIComponent(label).replace(/%20/g, "_").replace(/%3A/g, ":")
+        return url;
+        // console.log(url);
+    }
 
-	function myFunction() {
-		var url = navigateToTopic();
+    function myFunction() {
+        var url = navigateToTopic();
 
 
-		$.post("/success", url, function (data) {
-			document.getElementById('test').innerHTML = data;
-		});
-	}
+        $.post("/success", url, function (data) {
+            document.getElementById('test').innerHTML = data;
+        });
+    }
+
+
 
 </script>
