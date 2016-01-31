@@ -4,7 +4,7 @@ from os.path import abspath, join
 from werkzeug import secure_filename
 
 from parsepdf import getPDFText
-from funnel import Funnel, Sprinkler
+from funnel import Funnel#, Sprinkler
 
 app = Flask(__name__)
 app.secret_key = "fhdsbfdsnjfbj"
