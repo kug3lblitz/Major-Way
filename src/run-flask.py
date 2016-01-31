@@ -4,8 +4,6 @@ from flask import Flask, render_template, request, redirect, \
 	send_from_directory, url_for
 from werkzeug import secure_filename
 
-# from flask_forms import ContactForm
-
 from parsepdf import getPDFText
 from funnel import Funnel, Sprinkler
 

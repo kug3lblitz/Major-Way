@@ -164,6 +164,7 @@ def BigData(topic=""):
 
 
 def Disciplines(topic=""):
+
     # Imports the data populated by database/weekee.py as a list of dictonaries
 
     disciplines = ""
@@ -189,6 +190,7 @@ def Disciplines(topic=""):
 
 
 def Hook(parsed):
+
     disciplines = Disciplines()
 
     topicsTest = {}
@@ -350,11 +352,11 @@ def Sprinkler(url):
 
 ########## FOR TESTING ############
 
-parsed = FileIO()
-# # predictList = Funnel(parsed).FossilFuel(5)[:5]
-# # print predictList
-parsed = Hook(parsed)
-print Digiorno(parsed)
+# parsed = FileIO()
+# # # predictList = Funnel(parsed).FossilFuel(5)[:5]
+# # # print predictList
+# parsed = Hook(parsed)
+# print Digiorno(parsed)
 
 # predictList = [i[1] for i in predictList]
 

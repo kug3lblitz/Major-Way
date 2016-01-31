@@ -22,8 +22,8 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-    <script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}">
-    </script>
+    <script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/jquery.canvasjs.min.js') }}"></script>
 
 
 </head>
@@ -162,7 +162,6 @@
                                 indexLabelFontSize: 20,
                                 indexLabel: "{label} {y}%",
                                 startAngle: -20,
-                                showInLegend: true,
                                 toolTipContent: "{legendText} {y}%",
                                 dataPoints: parsed_data_set
 
@@ -174,7 +173,16 @@
 
     </script>
 
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+
+            <div id="chartContainer"></div>
+
+            </div>
+        </div>
+    </div>
 
 
 </section>
