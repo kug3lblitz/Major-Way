@@ -5,372 +5,360 @@ from operator import itemgetter
 from sys import exit
 from time import time
 
-from bs4 import BeautifulSoup
 from database.wikipedia import WikipediaPage
 from os.path import abspath, dirname, join
 from re import I, M, S  # regex flags
 from re import compile
 
+
 start = time()
-
-'''
-Imports parsed PDF text.
-
-Input:None
-Output: text -> data as string
-'''
 
 
 def FileIO():
-    text = ""
-    fileName = raw_input("File name: ")
 
-    # Dir is hardcoded
-    BASEDIR = dirname(abspath(__file__))
-    path = join(BASEDIR, "samples", str(fileName) + ".txt")
+	'''
+	Imports parsed PDF text.
 
-    # Avoids issues with bytecodes
-    try:
-        with open(path, 'r') as inputFile:
-            for i in range(sum(1 for line in open(path, 'r'))):
-                lines = str(inputFile.readline())
-                text += lines
+	Input:None
+	Output: text -> data as string
+	'''
 
-    except IOError:
-        exit(str(fileName) + ".txt does not exist.")
+	text = ""
+	fileName = raw_input("File name: ")
 
-    return text
+	# Dir is hardcoded
+	BASEDIR = dirname(abspath(__file__))
+	path = join(BASEDIR, "samples", str(fileName) + ".txt")
+
+	# Avoids issues with bytecodes
+	try:
+		with open(path, 'r') as inputFile:
+			for i in range(sum(1 for line in open(path, 'r'))):
+				lines = str(inputFile.readline())
+				text += lines
+
+	except IOError:
+		exit(str(fileName) + ".txt does not exist.")
+
+	return text
 
 
 class Funnel(object):
-    '''
-    Scans through the text to funnel out all relevant data.
-    '''
 
-    def __init__(self, text):
+	'''
+	Scans through the text to funnel out all relevant data.
+	'''
 
-        self._text = self._Gunk(text)
+	def __init__(self, text):
 
-    def _Gunk(self, text):
+		self._text = self._Gunk(text)
 
-        '''
-        Removes irrelevant data to improve content predicting accuracy
+	def _Gunk(self, text):
 
-        Input:
-        None
+		'''
+		Removes irrelevant data to improve content predicting accuracy
 
-        Output:
-        None
-        '''
+		Input:
+		None
 
-        gunkPat = compile(r'academic integrity.*\n\n|attendance.*\n\n',
-                          I | M | S)
-        gunk = gunkPat.findall(text)
+		Output:
+		None
+		'''
 
-        text = text.replace("".join(gunk), "")
+		gunkPat = compile(r'academic integrity.*\n\n|attendance.*\n\n',
+						  I | M | S)
+		gunk = gunkPat.findall(text)
 
-        return text
+		text = text.replace("".join(gunk), "")
 
-    def FossilFuel(self, options=4):
+		return text
 
-        '''
-        Concept tagging function. Compares parsed data with terminology
-        corresponding to a vast list of disciplines.
+	def FossilFuel(self, options=4):
 
-        Input:
-        None
+		'''
+		Concept tagging function. Compares parsed data with terminology
+		corresponding to a vast list of disciplines.
 
-        Output:
-        subfields -> list of tuples, containing the subfield and the
-        corresponding number of matches.
-        '''
+		Input:
+		None
 
-        # Imports the data populated by database/weekee.py as a list of
-        # dictonaries
+		Output:
+		subfields -> list of tuples, containing the subfield and the
+		corresponding number of matches.
+		'''
 
-        subfieldsData = BigData()
+		# Imports the data populated by database/weekee.py as a list of
+		# dictonaries
 
-        # Compares keywords in text with imported database, O(n*len(m)*len(k))
+		subfieldsData = BigData()
 
-        bigList = {}  # Temporary containers
-        keys = {}
+		# Compares keywords in text with imported database, O(n*len(m)*len(k))
 
-        if isinstance(self._text, basestring):
-            self._text = self._text.split(" ")
+		bigList = {}  # Temporary containers
+		keys = {}
 
-        for i in range(len(subfieldsData)):
-            values = set(list(chain(*subfieldsData[i].values()))) \
-                     & set(self._text)  # intersection of sets
+		if isinstance(self._text, basestring):
+			self._text = self._text.split(" ")
 
-            if values:
-                keys[str(" ".join(subfieldsData[i].keys()))] = len(values)
-                bigList.update(keys)
-                keys = {}
+		for i in range(len(subfieldsData)):
+			values = set(list(chain(*subfieldsData[i].values()))) \
+					 & set(self._text)  # intersection of sets
 
-        # Sorts list of tuples in reverse
-        minedList = sorted(bigList.items(), key=itemgetter(1), reverse=True)
+			if values:
+				keys[str(" ".join(subfieldsData[i].keys()))] = len(values)
+				bigList.update(keys)
+				keys = {}
 
-        # Container to store the maximum 'options' number of options
-        maxCounter = []
+		# Sorts list of tuples in reverse
+		minedList = sorted(bigList.items(), key=itemgetter(1), reverse=True)
 
-        for i in minedList:
-            maxCounter.append(i[1])
+		# Container to store the maximum 'options' number of options
+		maxCounter = []
 
-        maxCounter = sorted(set(maxCounter), reverse=True)
+		for i in minedList:
+			maxCounter.append(i[1])
 
-        subfields = []
+		maxCounter = sorted(set(maxCounter), reverse=True)
 
-        for i in range(len(minedList)):
-            if set(minedList[i]) & set(maxCounter[:options]):
-                subfields.append(maxCounter.index(minedList[i][1]) + 1)
-                subfields.append(minedList[i][0])
+		subfields = []
 
-        subfields = zip(subfields[0::2], subfields[1::2])
+		for i in range(len(minedList)):
+			if set(minedList[i]) & set(maxCounter[:options]):
+				subfields.append(maxCounter.index(minedList[i][1]) + 1)
+				subfields.append(minedList[i][0])
 
-        subfields = sorted(subfields, key=lambda x: (x[0], x[1]))
+		subfields = zip(subfields[0::2], subfields[1::2])
 
-        return subfields
+		subfields = sorted(subfields, key=lambda x: (x[0], x[1]))
+
+		return subfields
 
 
 def BigData(topic=""):
-    # Imports the data populated by database/weekee.py as a list of dictonaries
 
-    subfieldsData = ""
+	# Imports the data populated by database/weekee.py as a list of dictonaries
 
-    BASEDIR = dirname(abspath(__file__))
-    path = join(BASEDIR, "database", "bigdata.txt")  # Dir is hardcoded
+	subfieldsData = ""
 
-    try:
-        with open(path, 'r') as inputFile:
-            # Avoids issues with bytecodes
-            for i in range(sum(1 for line in open(path, 'r'))):
-                lines = str(inputFile.readline())
-                if "[" in lines:
-                    subfieldsData += lines
+	BASEDIR = dirname(abspath(__file__))
+	path = join(BASEDIR, "database", "bigdata.txt")  # Dir is hardcoded
 
-    except IOError:
-        exit("File does not exist.")
+	try:
+		with open(path, 'r') as inputFile:
+			# Avoids issues with bytecodes
+			for i in range(sum(1 for line in open(path, 'r'))):
+				lines = str(inputFile.readline())
+				if "[" in lines:
+					subfieldsData += lines
 
-    # Convert file string to Python object (list of dictionaries)
-    subfieldsData = literal_eval(subfieldsData)
+	except IOError:
+		exit("File does not exist.")
 
-    if topic:
+	# Convert file string to Python object (list of dictionaries)
+	subfieldsData = literal_eval(subfieldsData)
 
-        return [d.values() for d in subfieldsData if d.keys() == topic][0][0]
+	if topic:
 
-    else:
+		return [d.values() for d in subfieldsData if d.keys() == topic][0][0]
 
-        return subfieldsData
+	else:
+
+		return subfieldsData
 
 
 def Disciplines(topic=""):
 
-    # Imports the data populated by database/weekee.py as a list of dictonaries
+	# Imports the data populated by database/weekee.py as a list of dictonaries
 
-    disciplines = ""
+	disciplines = ""
 
-    BASEDIR = dirname(abspath(__file__))
-    path = join(BASEDIR, "database", "disciplines.txt")  # Dir is hardcoded
+	BASEDIR = dirname(abspath(__file__))
+	path = join(BASEDIR, "database", "disciplines.txt")  # Dir is hardcoded
 
-    try:
-        with open(path, 'r') as inputFile:
-            # Avoids issues with bytecodes
-            for i in range(sum(1 for line in open(path, 'r'))):
-                lines = str(inputFile.readline())
-                if "[" in lines:
-                    disciplines += lines
+	try:
+		with open(path, 'r') as inputFile:
+			# Avoids issues with bytecodes
+			for i in range(sum(1 for line in open(path, 'r'))):
+				lines = str(inputFile.readline())
+				if "[" in lines:
+					disciplines += lines
 
-    except IOError:
-        exit("File does not exist.")
+	except IOError:
+		exit("File does not exist.")
 
-    # Convert file string to Python object (list of dictionaries)
-    disciplines = literal_eval(disciplines)
+	# Convert file string to Python object (list of dictionaries)
+	disciplines = literal_eval(disciplines)
 
-    return disciplines
+	return disciplines
 
 
 def Hook(parsed):
 
-    disciplines = Disciplines()
+	disciplines = Disciplines()
 
-    topicsTest = {}
-    topics = []
+	topicsTest = {}
+	topics = []
 
-    for i in disciplines:
-        if i in parsed.lower():
-            try:
-                summary = str(WikipediaPage(i).summary)
-                summary = Funnel(summary).FossilFuel(2)[:5]
-                summary = [i[1] for i in summary]
-                topics.extend(summary)
-            except:
-                continue
+	for i in disciplines:
+		if i in parsed.lower():
+			try:
+				summary = str(WikipediaPage(i).summary)
+				summary = Funnel(summary).FossilFuel(2)[:5]
+				summary = [i[1] for i in summary]
+				topics.extend(summary)
+			except:
+				continue
 
-        # for i in disciplines.values():
-        # 	for j in i:
-        for i in disciplines:
-            if i in parsed.lower():
-                try:
-                    summary = str(WikipediaPage(i).summary)
-                    summary = Funnel(summary).FossilFuel(2)[:5]
-                    summary = [i[1] for i in summary]
-                    topics.extend(summary)
-                    print topics
-                except:
-                    continue
-
-    return topics
+	return topics
 
 
 # Returns pie which is in JSON format.
 def Digiorno(topics):
-    pie = {}
-    counter = 0
+	pie = {}
+	counter = 0
 
-    for i in topics:
-        pie[i] = float(
-                "{0:.2f}".format(float(topics.count(i)) / len(topics) * 100))
+	for i in topics:
+		pie[i] = float(
+				"{0:.2f}".format(float(topics.count(i)) / len(topics) * 100))
 
-    counter = sum(pie.values())
+	counter = sum(pie.values())
 
-    with open('data.json', 'w') as outfile:
-        dump(pie, outfile)
+	with open('data.json', 'w') as outfile:
+		dump(pie, outfile)
 
-    return pie
+	return pie
 
-    ########## FOR SPRINKLER ############
-    # def Sprinkler(url):
-    # 	DB_URL = "http://dbpedia.org/page/" + str(url)
-    #
-    # 	htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
-    # 					  '.*'
-    # 					  '<!-- footer -->', I | S | M)
-    #
-    # 	try:
-    # 		import requests
-    # 		getData = requests.get(DB_URL).text
-    #
-    # 	except requests.ConnectionError:
-    # 		exit("You forgot to turn your Wi-Fi on.")
-    #
-    # 	except:
-    #
-    # 		try:
-    # 			print "Requests library not found. Using urllib2."
-    #
-    # 			import urllib2
-    # 			getData = urllib2.urlopen(DB_URL).read()
-    #
-    # 		except urllib2.URLError:
-    # 			exit("Check your internet connection!")
-    #
-    # 	htmldata = findall(htmlPat, getData)
-    #
-    # 	majors = []
-    #
-    # 	soup = BeautifulSoup(" ".join(htmldata), "html.parser")
-    #
-    # 	for tag in soup.findAll(attrs={'class': 'uri'}):
-    # 		try:
-    # 			tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
-    # 			majors.append(tags)
-    # 		except:
-    # 			continue
-    #
-    # 	disciplines = [i for i in sorted(set(majors))]
-    # 	disciplines = [i for i in disciplines if i.lower() not in i]
-    #
-    # 	return disciplines
-    pie = {}
-    counter = 0
-    disciplines = Disciplines()
+	########## FOR SPRINKLER ############
+	# def Sprinkler(url):
+	# 	DB_URL = "http://dbpedia.org/page/" + str(url)
+	#
+	# 	htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
+	# 					  '.*'
+	# 					  '<!-- footer -->', I | S | M)
+	#
+	# 	try:
+	# 		import requests
+	# 		getData = requests.get(DB_URL).text
+	#
+	# 	except requests.ConnectionError:
+	# 		exit("You forgot to turn your Wi-Fi on.")
+	#
+	# 	except:
+	#
+	# 		try:
+	# 			print "Requests library not found. Using urllib2."
+	#
+	# 			import urllib2
+	# 			getData = urllib2.urlopen(DB_URL).read()
+	#
+	# 		except urllib2.URLError:
+	# 			exit("Check your internet connection!")
+	#
+	# 	htmldata = findall(htmlPat, getData)
+	#
+	# 	majors = []
+	#
+	# 	soup = BeautifulSoup(" ".join(htmldata), "html.parser")
+	#
+	# 	for tag in soup.findAll(attrs={'class': 'uri'}):
+	# 		try:
+	# 			tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
+	# 			majors.append(tags)
+	# 		except:
+	# 			continue
+	#
+	# 	disciplines = [i for i in sorted(set(majors))]
+	# 	disciplines = [i for i in disciplines if i.lower() not in i]
+	#
+	# 	return disciplines
+	pie = {}
+	counter = 0
+	disciplines = Disciplines()
 
-    # print topics
+	# print topics
 
-    for i in topics:
+	for i in topics:
 
-        try:
-            # for j in disciplines.values():
-            # for  in disciplines:
-            if i in disciplines:
-                print i
-                pie[i] = float("{0:.2f}".format(
-                        float(topics.count(i)) / len(topics) * 100))
+		try:
+			# for j in disciplines.values():
+			# for  in disciplines:
+			if i in disciplines:
+				print i
+				pie[i] = float("{0:.2f}".format(
+						float(topics.count(i)) / len(topics) * 100))
 
-        except Exception as e:
-            print e
+		except Exception as e:
+			print e
 
-    counter = sum(pie.values())
+	counter = sum(pie.values())
 
-    with open('data.json', 'w') as outfile:
-        dump(pie, outfile)
+	with open('data.json', 'w') as outfile:
+		dump(pie, outfile)
 
-    return pie
+	return pie
 
 
-def Sprinkler(url):
-    DB_URL = "http://dbpedia.org/page/" + str(url)
+# def Sprinkler(url):
+#     DB_URL = "http://dbpedia.org/page/" + str(url)
 
-    htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
-                      '.*'
-                      '<!-- footer -->', I | S | M)
+#     htmlPat = compile('xmlns:ns1="http://www.w3.org/ns/prov#"'
+#                       '.*'
+#                       '<!-- footer -->', I | S | M)
 
-    try:
-        import requests
-        getData = requests.get(DB_URL).text
+#     try:
+#         import requests
+#         getData = requests.get(DB_URL).text
 
-    except requests.ConnectionError:
-        exit("You forgot to turn your Wi-Fi on.")
+#     except requests.ConnectionError:
+#         exit("You forgot to turn your Wi-Fi on.")
 
-    except:
+#     except:
 
-        try:
-            print "Requests library not found. Using urllib2."
+#         try:
+#             print "Requests library not found. Using urllib2."
 
-            import urllib2
-            getData = urllib2.urlopen(DB_URL).read()
+#             import urllib2
+#             getData = urllib2.urlopen(DB_URL).read()
 
-        except urllib2.URLError:
-            exit("Check your internet connection!")
+#         except urllib2.URLError:
+#             exit("Check your internet connection!")
 
-    htmldata = findall(htmlPat, getData)
+#     htmldata = findall(htmlPat, getData)
 
-    majors = []
+#     majors = []
 
-    soup = BeautifulSoup(" ".join(htmldata), "html.parser")
+#     soup = BeautifulSoup(" ".join(htmldata), "html.parser")
 
-    for tag in soup.findAll(attrs={'class': 'uri'}):
-        try:
-            tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
-            majors.append(tags)
-        except:
-            continue
+#     for tag in soup.findAll(attrs={'class': 'uri'}):
+#         try:
+#             tags = str(tag.contents[1]).replace(':', '').replace('_', ' ')
+#             majors.append(tags)
+#         except:
+#             continue
 
-    disciplines = [i for i in sorted(set(majors))]
-    disciplines = [i for i in disciplines if i.lower() not in i]
+#     disciplines = [i for i in sorted(set(majors))]
+#     disciplines = [i for i in disciplines if i.lower() not in i]
 
-    return disciplines
+#     return disciplines
 
 
 ########## FOR TESTING ############
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #parsed = FileIO()
 # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # print predictList
 #parsed = Hook(parsed)
 #print Digiorno(parsed)
 
-parsed = FileIO()
-# # predictList = Funnel(parsed).FossilFuel(5)[:5]
-# # print predictList
-parsed = Hook(parsed)
-print Digiorno(parsed)
+# parsed = FileIO()
+# predictList = Funnel(parsed).FossilFuel(5)[:5]
+# print predictList
+# parsed = Hook(parsed)
+# print Digiorno(parsed)
 
 # parsed = FileIO()
-# # # predictList = Funnel(parsed).FossilFuel(5)[:5]
-# # # print predictList
+# predictList = Funnel(parsed).FossilFuel(5)[:5]
+# print predictList
 
 # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # print predictList
@@ -402,4 +390,4 @@ print Digiorno(parsed)
 end = time()
 
 print "\nProgram took " + "{0:.3f}".format(
-        (end - start)) + " seconds to generate data."
+		(end - start)) + " seconds to generate data."

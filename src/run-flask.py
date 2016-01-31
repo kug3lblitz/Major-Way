@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, \
     send_from_directory, url_for
+from json import dumps, load
+
 from os.path import abspath, join
 from werkzeug import secure_filename
 
@@ -55,11 +57,6 @@ def ViewPDF(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
-@app.route('/uploads/<filename>/data')
-def ViewData(filename):
-    return send_from_directory('', 'data.json')
-
-
 @app.route('/success', methods=['GET', 'POST'])
 def get_uri():
     print request.form
@@ -80,16 +77,14 @@ def get_uri():
 @app.route('/getting_json', methods=['GET', 'POST'])
 def get_json_information():
     if request.method == 'GET':
-        import json
-        import os
 
 
         # print os.path.dirname(os.path.realpath(__file__))
 
-        with open('data.json') as data_file:
-            data = json.load(data_file)
+        with open('data1.json') as data_file:
+            data = load(data_file)
 
-        json_obj = json.dumps(data)
+        json_obj = dumps(data)
 
         return render_template('success.html', data=json_obj)
 

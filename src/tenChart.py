@@ -1,15 +1,7 @@
 import json
-from itertools import chain
-from json import dump
-from operator import itemgetter
 from sys import exit
-from time import time
 
-from bs4 import BeautifulSoup
-from database.wikipedia import WikipediaPage
 from os.path import abspath, dirname, join
-from re import I, M, S  # regex flags
-from re import compile
 from ast import literal_eval
 
 def main():
@@ -27,11 +19,7 @@ def main():
     finalDict['logic'] = 0
     finalDict['statistics'] = 0
     finalDict['systems science'] = 0
-
     
-#    for key, value in finalDict.items():
-#        if key == "biology":
-#            print (value)
     perc1 = 0
     
    
@@ -39,12 +27,6 @@ def main():
     itemStr = items1.read()
     
     itemsJson = json.loads(itemStr)
-#    for u in itemsJson:
- #       print(u)
- #       print(itemsJson[u])
- #       perc1 += float(itemsJson[u])
- #   print ("hiihhihih")
- #   print(perc1)
     dictList = Disciplines()
     perc = float(0)
     for n in itemsJson:
@@ -55,22 +37,11 @@ def main():
                 if flag2 == True:
                     break
                 if p == n:
-                    print(key)
                     finalDict[key] = float(finalDict[key]) + float(itemsJson[n])
                     perc += float(itemsJson[n])
-                    print(itemsJson[n])
                     flag2 = True
                     flag1 = True
-    print(perc)
-#                    for key1, value1 in finalDict.items():
- #                       if key1 == key:
-                            
-  #                  print(key)
-                
-        
-#    print(itemsJson['ecology'])
 
-    print(finalDict)
     fout1 = open("data1.json",'w')
     fout1.write("{")
             
@@ -180,6 +151,3 @@ def Disciplines(topic=""):
     return disciplines
 
 main()
-#items2 = json.loads(items1)
-
-#print(string(items2))

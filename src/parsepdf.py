@@ -47,8 +47,6 @@ Input: None
 Output: Textfile of parsed data
 '''
 
-<<<<<<< HEAD
-
 #def test():
  #   from os.path import abspath, dirname, join
 
@@ -66,7 +64,6 @@ Output: Textfile of parsed data
 #        exit("Invalid file name.")
 #
 #test()
-=======
 #
 # def test():
 #     from os.path import abspath, dirname, join
@@ -85,7 +82,3 @@ Output: Textfile of parsed data
 #         exit("Invalid file name.")
 
 # test()
-<<<<<<< HEAD
->>>>>>> e804a5930036a9f51c42ba3c302f471452b3ec1f
-=======
->>>>>>> 9aa3064438112d8664a8ef3884a717911d649104
