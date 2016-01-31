@@ -6,7 +6,7 @@ from os.path import abspath, join
 from werkzeug import secure_filename
 
 from parsepdf import getPDFText
-from funnel import Funnel#, Sprinkler
+from funnel import Funnel
 
 app = Flask(__name__)
 app.secret_key = "fhdsbfdsnjfbj"
@@ -27,12 +27,14 @@ ALLOWED_EXTENSIONS = set(['pdf'])
 
 
 def allowed_file(filename):
+
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
 @app.route('/uploads', methods=['GET', 'POST'])
 def upload_file():
+
     if request.method == 'POST':
         inputfile = request.files['file']
         if inputfile and allowed_file(inputfile.filename):
@@ -45,41 +47,36 @@ def upload_file():
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    # return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
     parsed = getPDFText(UPLOAD_FOLDER + filename)
-    data = Funnel(parsed).FossilFuel(3)[:6]
+    data = Funnel(parsed).FossilFuel(3)[:5]
     data = [i[1] for i in data]
     return render_template('data.html', data=data)
 
 
+# @app.route('/success', methods=['GET', 'POST'])
+# def get_uri():
+#     print request.form
+#     if request.method == 'POST':
+#         data = dict((key, request.form.getlist(key)) for key in
+#                     request.form.keys()).keys()[0]
+#         data = Sprinkler(data)
+#         return render_template('success.html', data=data)
+#     else:
+#         data = "URL ERROR"
+#         return render_template('success.html', data=data)
+
+
 @app.route('/uploads/<filename>/view')
 def ViewPDF(filename):
+
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 @app.route('/success', methods=['GET', 'POST'])
-def get_uri():
-    print request.form
-
-    if request.method == 'POST':
-
-        data = dict((key, request.form.getlist(key)) for key in
-                    request.form.keys()).keys()[0]
-        data = Sprinkler(data)
-        return render_template('success.html', data=data)
-
-    else:
-
-        data = "URL ERROR"
-        return render_template('success.html', data=data)
-
-
-@app.route('/getting_json', methods=['GET', 'POST'])
 def get_json_information():
+
     if request.method == 'GET':
-
-
-        # print os.path.dirname(os.path.realpath(__file__))
 
         with open('data1.json') as data_file:
             data = load(data_file)
@@ -89,17 +86,7 @@ def get_json_information():
         return render_template('success.html', data=json_obj)
 
 
-
-
-
-################################### Errors ###################################
-
-# @app.errorhandler(404)
-# def page_not_found(e):
-# 	return render_template('404.html'), 404
-
 ################################### main ###################################
-
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -8,7 +8,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #4a494a;
-    /*background-image: url('../img/background.png');*/
 }
 
 p {
@@ -127,8 +126,8 @@ header .container {
 header img {
     display: block;
     margin: 0 auto 10px;
-    width: 60%;
-    height: 60%;
+    width: 45%;
+    height: 45%;
 }
 
 header .intro-text .name {
@@ -520,43 +519,44 @@ ul, li {
 
 /*Cool buttons*/
 
+
 .svg-wrapper {
-    margin-top: 0;
-    position: relative;
-    width: 500px;
-    height: 40px;
-    display: inline-block;
-    border-radius: 3px;
-    margin-left: 5px;
-    margin-right: 5px;
+  margin-top:0;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #shape {
-    stroke-width: 10px;
-    file: transparent;
-    stroke: #fff;
-    stroke-dasharray: 80 900;
-    stroke-dashoffset: -220;
-    transition: 1s all ease;
+  stroke-width: 6px;
+  file: transparent;
+  stroke: #fff;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
 }
 
 #text {
-    margin-top: -35px;
-    text-align: center;
+  margin-top: -35px;
+  text-align: center;
 }
 
 #text a {
-    color: white;
-    text-decoration: none;
-    font-weight: 100;
-    font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
 }
 
 .svg-wrapper:hover #shape {
-    stroke-dasharray: 50 0;
-    stroke-width: 6px;
-    stroke-dashoffset: 0;
-    stroke: #1B75BB;
+  stroke-dasharray: 50 0;
+  stroke-width: 6px;
+  stroke-dashoffset: 0;
+  stroke: #1B75BB;
 }
 
 /*Boo*/
@@ -640,4 +640,23 @@ ul, li {
     50% {
         box-shadow: 25px 5px #000000, 30px 5px #000000, 35px 5px #000000, 40px 5px #000000, 45px 5px #000000, 50px 5px #000000, 20px 10px #000000, 25px 10px #BBBBBB, 30px 10px #BBBBBB, 35px 10px #BBBBBB, 40px 10px #BBBBBB, 45px 10px #BBBBBB, 50px 10px #BBBBBB, 55px 10px #000000, 60px 10px #000000, 15px 15px #000000, 20px 15px #BBBBBB, 25px 15px #FFFFFF, 30px 15px #FFFFFF, 35px 15px #FFFFFF, 40px 15px #FFFFFF, 45px 15px #FFFFFF, 50px 15px #FFFFFF, 55px 15px #BBBBBB, 60px 15px #BBBBBB, 65px 15px #000000, 10px 20px #000000, 15px 20px #BBBBBB, 20px 20px #FFFFFF, 25px 20px #FFFFFF, 30px 20px #FFFFFF, 35px 20px #FFFFFF, 40px 20px #FFFFFF, 45px 20px #FFFFFF, 50px 20px #FFFFFF, 55px 20px #FFFFFF, 60px 20px #FFFFFF, 65px 20px #BBBBBB, 70px 20px #000000, 10px 25px #000000, 15px 25px #BBBBBB, 20px 25px #000000, 25px 25px #FFFFFF, 30px 25px #000000, 35px 25px #FFFFFF, 40px 25px #FFFFFF, 45px 25px #FFFFFF, 50px 25px #FFFFFF, 55px 25px #FFFFFF, 60px 25px #FFFFFF, 65px 25px #FFFFFF, 70px 25px #BBBBBB, 75px 25px #000000, 5px 30px #000000, 10px 30px #BBBBBB, 15px 30px #FFFFFF, 20px 30px #000000, 25px 30px #FFFFFF, 30px 30px #000000, 35px 30px #FFFFFF, 40px 30px #FFFFFF, 45px 30px #FFFFFF, 50px 30px #FFFFFF, 55px 30px #000000, 60px 30px #000000, 65px 30px #000000, 70px 30px #FFFFFF, 75px 30px #BBBBBB, 80px 30px #000000, 5px 35px #000000, 10px 35px #BBBBBB, 15px 35px #FFFFFF, 20px 35px #000000, 25px 35px #FFFFFF, 30px 35px #000000, 35px 35px #FFFFFF, 40px 35px #FFFFFF, 45px 35px #FFFFFF, 50px 35px #000000, 55px 35px #FFFFFF, 60px 35px #FFFFFF, 65px 35px #000000, 70px 35px #FFFFFF, 75px 35px #BBBBBB, 80px 35px #000000, 5px 40px #000000, 10px 40px #BBBBBB, 15px 40px #FFFFFF, 20px 40px #FFFFFF, 25px 40px #FFFFFF, 30px 40px #FFFFFF, 35px 40px #FFFFFF, 40px 40px #FFFFFF, 45px 40px #FFFFFF, 50px 40px #FFFFFF, 55px 40px #FFFFFF, 60px 40px #BBBBBB, 65px 40px #000000, 70px 40px #FFFFFF, 75px 40px #000000, 5px 45px #000000, 10px 45px #BBBBBB, 15px 45px #FD0E1B, 20px 45px #FFFFFF, 25px 45px #FD0E1B, 30px 45px #FFFFFF, 35px 45px #FD0E1B, 40px 45px #FFFFFF, 45px 45px #FFFFFF, 50px 45px #FFFFFF, 55px 45px #FFFFFF, 60px 45px #000000, 65px 45px #FFFFFF, 70px 45px #FFFFFF, 75px 45px #BBBBBB, 80px 45px #000000, 5px 50px #000000, 10px 50px #BBBBBB, 15px 50px #FFFFFF, 20px 50px #FD0E1B, 25px 50px #FFFFFF, 30px 50px #FD0E1B, 35px 50px #FFFFFF, 40px 50px #FFFFFF, 45px 50px #FFFFFF, 50px 50px #FFFFFF, 55px 50px #FFFFFF, 60px 50px #FFFFFF, 65px 50px #FFFFFF, 70px 50px #FFFFFF, 75px 50px #BBBBBB, 80px 50px #000000, 5px 55px #000000, 10px 55px #BBBBBB, 15px 55px #FFFFFF, 20px 55px #FFFFFF, 25px 55px #FFFFFF, 30px 55px #FFFFFF, 35px 55px #FFFFFF, 40px 55px #FFFFFF, 45px 55px #FFFFFF, 50px 55px #FFFFFF, 55px 55px #FFFFFF, 60px 55px #FFFFFF, 65px 55px #FFFFFF, 70px 55px #FFFFFF, 75px 55px #BBBBBB, 80px 55px #000000, 10px 60px #000000, 15px 60px #BBBBBB, 20px 60px #FFFFFF, 25px 60px #FFFFFF, 30px 60px #FFFFFF, 35px 60px #FFFFFF, 40px 60px #FFFFFF, 45px 60px #FFFFFF, 50px 60px #FFFFFF, 55px 60px #FFFFFF, 60px 60px #FFFFFF, 65px 60px #FFFFFF, 70px 60px #FFFFFF, 75px 60px #BBBBBB, 80px 60px #000000, 10px 65px #000000, 15px 65px #BBBBBB, 20px 65px #FFFFFF, 25px 65px #FFFFFF, 30px 65px #FFFFFF, 35px 65px #FFFFFF, 40px 65px #FFFFFF, 45px 65px #FFFFFF, 50px 65px #FFFFFF, 55px 65px #FFFFFF, 60px 65px #FFFFFF, 65px 65px #FFFFFF, 70px 65px #BBBBBB, 75px 65px #000000, 15px 70px #000000, 20px 70px #BBBBBB, 25px 70px #BBBBBB, 30px 70px #FFFFFF, 35px 70px #FFFFFF, 40px 70px #FFFFFF, 45px 70px #FFFFFF, 50px 70px #FFFFFF, 55px 70px #FFFFFF, 60px 70px #BBBBBB, 65px 70px #BBBBBB, 70px 70px #000000, 20px 75px #000000, 25px 75px #000000, 30px 75px #BBBBBB, 35px 75px #BBBBBB, 40px 75px #BBBBBB, 45px 75px #BBBBBB, 50px 75px #BBBBBB, 55px 75px #BBBBBB, 60px 75px #000000, 65px 75px #000000, 30px 80px #000000, 35px 80px #000000, 40px 80px #000000, 45px 80px #000000, 50px 80px #000000, 55px 80px #000000;
     }
+}
+
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }

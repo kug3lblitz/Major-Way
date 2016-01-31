@@ -2,73 +2,75 @@
 
 {% include 'css.html' %}
 {% include 'js.html' %}
-<script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}">
-</script>
+<script src="{{ url_for('static', filename = 'js/canvasjs.min.js') }}"></script>
 
 <section class="success">
-    <div class="container">
-        <div class="row">
+	<div class="container">
+		<div class="row">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-12 text-center">
+		                <h2>Breakdown of major</h2>
+		                <hr class="lightbulb">
+		            </div>
+		        </div>
 
-            <!-- JavaScript Pie -->
-            <script>
-
-
-                window.onload = function () {
-
-                    var data1 = {{ data|tojson }};
-
-                    var JSONObject = JSON.parse(data1);
-
-                    var parsed_data_set = [];
-                    for (value in JSONObject) {
-
-                        new_topic = {
-                            y: JSONObject[value],
-                            legendText: value,
-                            label: value
-                        };
-
-                        parsed_data_set.push(new_topic);
-
-                    }
-
-                    var chart = new CanvasJS.Chart("chartContainer",
-                            {
-                                title: {
-                                    text: "Chart stuff"
-                                },
-                                animationEnabled: true,
-                                legend: {
-                                    verticalAlign: "center",
-                                    horizontalAlign: "left",
-                                    fontSize: 20,
-                                    fontFamily: "Helvetica"
-                                },
-                                theme: "theme1",
-                                data: [
-                                    {
-                                        type: "pie",
-                                        indexLabelFontFamily: "Garamond",
-                                        indexLabelFontSize: 20,
-                                        indexLabel: "{label} {y}%",
-                                        startAngle: -20,
-                                        {#                                showInLegend: true,#}
-                                        toolTipContent: "{legendText} {y}%",
-                                        dataPoints: parsed_data_set
-
-                                    }
-                                ]
-                            });
-                    chart.render();
-                }
+			<!-- JavaScript Pie -->
+			<script>
 
 
-            </script>
+				window.onload = function () {
 
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+					var data1 = {{ data|tojson }};
+
+					var JSONObject = JSON.parse(data1);
+
+					var parsed_data_set = [];
+					for (value in JSONObject) {
+
+						new_topic = {
+							y: JSONObject[value],
+							legendText: value,
+							label: value
+						};
+
+						parsed_data_set.push(new_topic);
+
+					}
+
+					var chart = new CanvasJS.Chart("chartContainer",
+							{
+								backgroundColor: "#4a494a",
+ 								animationEnabled: true,
+								legend: {
+									verticalAlign: "center",
+									horizontalAlign: "left",
+									fontSize: 20,
+									fontFamily: "Helvetica"
+								},
+								data: [
+									{
+										type: "pie",
+										indexLabelFontFamily: "Garamond",
+										indexLabelFontSize: 20,
+										indexLabel: "{label} {y}%",
+										startAngle: -20,
+										toolTipContent: "{legendText} {y}%",
+										dataPoints: parsed_data_set
+
+									}
+								]
+							});
+					chart.render();
+				}
 
 
-        </div>
-    </div>
-    </div>
+			</script>
+
+			<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+		</div>
+	</div>
+	</div>
 </section>
