@@ -1,0 +1,42 @@
+import json
+from ast import literal_eval
+
+def main():
+    items1 = open('data.json','r')
+    itemStr = items1.read()
+    
+    itemsJson = json.loads(itemStr)  
+    for n in itemsJson:
+        print(n)
+    print(itemsJson['ecology'])
+    dictList = Disciplines()
+    print (dictList)
+
+def Disciplines(topic=""):
+    # Imports the data populated by database/weekee.py as a list of dictonaries
+
+    disciplines = ""
+
+    BASEDIR = dirname(abspath(__file__))
+    path = join(BASEDIR, "database", "disciplines1.txt")  # Dir is hardcoded
+
+    try:
+        with open(path, 'r') as inputFile:
+            # Avoids issues with bytecodes
+            for i in range(sum(1 for line in open(path, 'r'))):
+                lines = str(inputFile.readline())
+                if "[" in lines:
+                    disciplines += lines
+
+    except IOError:
+        exit("File does not exist.")
+
+    # Convert file string to Python object (list of dictionaries)
+    disciplines = literal_eval(disciplines)
+
+    return disciplines
+
+main()
+#items2 = json.loads(items1)
+
+#print(string(items2))
