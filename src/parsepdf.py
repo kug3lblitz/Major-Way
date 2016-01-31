@@ -1,12 +1,12 @@
 from cStringIO import StringIO
 
-from pdfminer.pdfparser import PDFParser
-from pdfminer.pdfdocument import PDFDocument
-from pdfminer.pdfpage import PDFPage
-from pdfminer.pdfinterp import PDFResourceManager
-from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFPageInterpreter
+from pdfminer.pdfinterp import PDFResourceManager
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
 
 '''
 Takes in PDF files and converts to Python human-readable Python data.
@@ -85,4 +85,7 @@ Output: Textfile of parsed data
 #         exit("Invalid file name.")
 
 # test()
+<<<<<<< HEAD
 >>>>>>> e804a5930036a9f51c42ba3c302f471452b3ec1f
+=======
+>>>>>>> 9aa3064438112d8664a8ef3884a717911d649104
