@@ -26,15 +26,25 @@
 					var JSONObject = JSON.parse(data1);
 
 					var parsed_data_set = [];
+
+
+					String.prototype.capitalizeFirstLetter = function() {
+					    return this.charAt(0).toUpperCase() + this.slice(1);
+					}
+
+
 					for (value in JSONObject) {
+						if (JSONObject[value] != 0) {
+							new_topic = {
+								y: JSONObject[value],
+								legendText: value.capitalizeFirstLetter(),
+								label: value.capitalizeFirstLetter()
+							};
 
-						new_topic = {
-							y: JSONObject[value],
-							legendText: value,
-							label: value
-						};
+							parsed_data_set.push(new_topic);
+						}
 
-						parsed_data_set.push(new_topic);
+						
 
 					}
 
@@ -46,13 +56,20 @@
 									verticalAlign: "center",
 									horizontalAlign: "left",
 									fontSize: 20,
-									fontFamily: "Helvetica"
+									fontFamily: "Arial"
 								},
 								data: [
 									{
 										type: "pie",
-										indexLabelFontFamily: "Garamond",
+										indexLabelFontFamily: "Arial",
+										indexLabelFontColor: "#FFFFFF",
 										indexLabelFontSize: 20,
+										markerBorderColor: "#FFFFFF",
+										
+										indexLabelFontColor: "white", 
+										indexLabelLineColor: "white",        
+										indexLabelPlacement: "white",
+										
 										indexLabel: "{label} {y}%",
 										startAngle: -20,
 										toolTipContent: "{legendText} {y}%",

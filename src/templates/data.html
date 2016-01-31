@@ -23,6 +23,7 @@
 		<![endif]-->
 
 
+
 </head>
 
 <body>
@@ -32,19 +33,42 @@
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="text-center">We</h1>
+				<h1 class="text-center">Major says "At ease!"</h1>
 				<hr class="wrench">
 			</div>
+		<div class="row">
+			<!-- Empty placeholder -->
+			<div class="col-sm-4 portfolio-item">
+					<div class="caption">
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#sirworm" class="portfolio-link" data-toggle="modal">
+					<img src="{{ url_for('static', filename = 'img/studyicon.png') }}" class="img-responsive" alt="">
+
+				</a>
+			</div>
+			<!-- Empty placeholder -->
+			<div class="col-sm-4 portfolio-item">
+					<div class="caption">
+					</div>
+				</a>
+			</div>
+		</div>
+
 		</div>
 	</div>
 
 </section>
 
+
+
 <script>
 	function stateChange(newState) {
                     setTimeout(function () {
                         $(location).attr('href', 'http://localhost:5000/success');
-                    }, 5000);
+                    }, 3000);
                 }
 
 	stateChange();
