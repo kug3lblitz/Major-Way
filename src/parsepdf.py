@@ -1,12 +1,12 @@
 from cStringIO import StringIO
 
-from pdfminer.pdfparser import PDFParser
-from pdfminer.pdfdocument import PDFDocument
-from pdfminer.pdfpage import PDFPage
-from pdfminer.pdfinterp import PDFResourceManager
-from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFPageInterpreter
+from pdfminer.pdfinterp import PDFResourceManager
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
 
 '''
 Takes in PDF files and converts to Python human-readable Python data.

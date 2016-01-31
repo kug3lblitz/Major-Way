@@ -222,6 +222,7 @@ def Hook(parsed):
     return topics
 
 
+# Returns pie which is in JSON format.
 def Digiorno(topics):
     pie = {}
     counter = 0
@@ -350,11 +351,17 @@ def Sprinkler(url):
 
     return disciplines
 
+
 ########## FOR TESTING ############
 
 # parsed = FileIO()
+<<<<<<< HEAD
 # # # predictList = Funnel(parsed).FossilFuel(5)[:5]
 # # # print predictList
+=======
+# predictList = Funnel(parsed).FossilFuel(5)[:5]
+# print predictList
+>>>>>>> 9aa3064438112d8664a8ef3884a717911d649104
 # parsed = Hook(parsed)
 # print Digiorno(parsed)
 
